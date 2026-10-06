@@ -1,0 +1,81 @@
+[
+    {
+    "id": "q001",
+    "type": "direct_lookup",
+    "language": "en",
+    "question": "What is the maximum administrative fine for an undertaking that infringes the prohibition of certain AI practices under the AI Act?",
+    "expected_answer": "Non-compliance with the prohibition of the AI practices referred to in Article 5 shall be subject to administrative fines of up to EUR 35 000 000 or, if the offender is an undertaking, up to 7 % of its total worldwide annual turnover for the preceding financial year, whichever is higher.",
+    "key_facts": ["EUR 35 000 000", "7 %", "whichever is higher"],
+    "min_key_facts": 2,
+    "source_doc": "ai_act_en",
+    "source_article": "99",
+    "confusable_with": "100",
+    "answerable": true
+  },
+  {
+    "id": "q002",
+    "type": "multi_passage",
+    "language": "en",
+    "question": "What obligations do providers of high-risk AI systems have?",
+    "expected_answer": "Providers of high-risk AI systems must: ensure compliance with the requirements of Section 2; indicate their name and contact address on the system, packaging or documentation; have a quality management system; keep the documentation; keep the automatically generated logs when under their control; ensure the system undergoes the conformity assessment procedure before being placed on the market; draw up an EU declaration of conformity; affix the CE marking; comply with the registration obligations; take corrective actions and provide information as required; demonstrate conformity on a reasoned request of a national competent authority; and ensure compliance with accessibility requirements.",
+    "key_facts": [
+        "quality management system",
+        "conformity assessment procedure",
+        "EU declaration of conformity",
+        "CE marking",
+        "registration obligations"
+    ],
+    "min_key_facts": 3,
+    "source_doc": "ai_act_en",
+    "source_article": "16",
+    "answerable": true
+    },
+    {
+    "id": "q003",
+    "type": "cross_document",
+    "language": "en",
+    "question": "What is a 'serious incident' under the AI Act, and what is a 'major ICT-related incident' under DORA?",
+    "expected_answer": "AI Act: an incident or malfunctioning of an AI system that directly or indirectly leads to the death of a person or serious harm to a person's health; a serious and irreversible disruption of the management or operation of critical infrastructure; the infringement of obligations under Union law intended to protect fundamental rights; or serious harm to property or the environment. DORA: an ICT-related incident that has a high adverse impact on the network and information systems that support critical or important functions of the financial entity.",
+    "key_facts": [
+        "death of a person",
+        "critical infrastructure",
+        "fundamental rights",
+        "high adverse impact",
+        "critical or important functions"
+    ],
+    "required_key_facts": ["critical infrastructure", "high adverse impact"],
+    "min_key_facts": 3,
+    "source_doc": ["ai_act_en", "dora_en"],
+    "source_article": ["3", "3"],
+    "answerable": true
+    },
+  {
+    "id": "q004",
+    "type": "german",
+    "language": "de",
+    "question": "Welche KI-Praktiken sind nach der KI-Verordnung verboten?",
+    "expected_answer": "Verboten sind unter anderem: (a) Techniken der unterschwelligen Beeinflussung oder manipulative bzw. täuschende Techniken, (b) das Ausnutzen von Schutzbedürftigkeit wegen Alter, Behinderung oder sozialer oder wirtschaftlicher Situation, (c) die soziale Bewertung natürlicher Personen mit nachteiligen Folgen, (d) Risikobewertungen für Straftaten ausschließlich auf Grundlage von Profiling, (e) das ungezielte Auslesen von Gesichtsbildern für Gesichtserkennungsdatenbanken, (f) die Ableitung von Emotionen am Arbeitsplatz und in Bildungseinrichtungen (Ausnahmen: medizinische oder Sicherheitsgründe), (g) biometrische Kategorisierung zur Ableitung sensibler Merkmale, (h) biometrische Echtzeit-Fernidentifizierung in öffentlich zugänglichen Räumen zu Strafverfolgungszwecken, außer in eng begrenzten Fällen.",
+    "key_facts": [
+        "unterschwelligen Beeinflussung",
+        "soziale Bewertung",
+        "ungezielte Auslesen von Gesichtsbildern",
+        "Ableitung von Emotionen",
+        "Echtzeit-Fernidentifizierungssysteme"
+    ],
+    "min_key_facts": 3,
+    "source_doc": "ai_act_de",
+    "source_article": "5",
+    "answerable": true
+    },
+    
+    {
+        "id": "q005",
+        "type": "unanswerable",
+        "language": "en",
+        "question": "What capital requirements apply to banks under Basel III?",
+        "expected_answer": "The documents do not contain this information.",
+        "source_doc": null,
+        "source_article": null,
+        "answerable": false
+    }
+]
