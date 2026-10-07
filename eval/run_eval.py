@@ -9,6 +9,7 @@ SYSTEMS = {
     "baseline": "baseline.baseline_rag",
     "chunked": "src.pipeline_v1",
     "reranked": "src.pipeline_v2",
+    "expanded": "src.pipeline_v3",
 }
 
 REFUSALS = [

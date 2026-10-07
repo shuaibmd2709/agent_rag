@@ -10,7 +10,7 @@ def get_llm():
 
     if provider == "ollama":
         from langchain_ollama import ChatOllama
-        return ChatOllama(model=model, temperature=0)
+        return ChatOllama(model=model, temperature=0, num_ctx=8192)
 
     if provider == "anthropic":
         from langchain_anthropic import ChatAnthropic
