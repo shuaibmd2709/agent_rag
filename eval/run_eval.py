@@ -8,6 +8,7 @@ from pathlib import Path
 SYSTEMS = {
     "baseline": "baseline.baseline_rag",
     "chunked": "src.pipeline_v1",
+    "reranked": "src.pipeline_v2",
 }
 
 REFUSALS = [
