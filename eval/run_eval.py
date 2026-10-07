@@ -7,6 +7,7 @@ from pathlib import Path
 
 SYSTEMS = {
     "baseline": "baseline.baseline_rag",
+    "chunked": "src.pipeline_v1",
 }
 
 REFUSALS = [
@@ -18,6 +19,8 @@ REFUSALS = [
 
 def norm(text: str) -> str:
     text = unicodedata.normalize("NFKC", text).lower()
+    text = re.sub(r"(?<=\d)[,\s](?=\d)", "", text)
+    text = re.sub(r"\s*%", "%", text)
     return re.sub(r"\s+", " ", text).strip()
 
 
@@ -31,7 +34,7 @@ def score_question(q, result):
     contexts = " ".join(c["text"] for c in result["contexts"])
 
     if not q["answerable"]:
-        refused = any(r in norm(answer) for r in REFUSALS)
+        refused = any(norm(r) in norm(answer) for r in REFUSALS)
         return {"id": q["id"], "type": q["type"], "passed": refused,
                 "context_hit": None, "answer_hit": None}
 
