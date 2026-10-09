@@ -1,6 +1,7 @@
 [
     {
     "id": "q001",
+    "set":"dev1",
     "type": "direct_lookup",
     "language": "en",
     "question": "What is the maximum administrative fine for an undertaking that infringes the prohibition of certain AI practices under the AI Act?",
@@ -14,6 +15,7 @@
   },
   {
     "id": "q002",
+    "set": "dev1",
     "type": "multi_passage",
     "language": "en",
     "question": "What obligations do providers of high-risk AI systems have?",
@@ -32,6 +34,7 @@
     },
     {
     "id": "q003",
+    "set":"dev1",
     "type": "cross_document",
     "language": "en",
     "question": "What is a 'serious incident' under the AI Act, and what is a 'major ICT-related incident' under DORA?",
@@ -51,6 +54,7 @@
     },
   {
     "id": "q004",
+    "set":"dev1",
     "type": "german",
     "language": "de",
     "question": "Welche KI-Praktiken sind nach der KI-Verordnung verboten?",
@@ -70,9 +74,97 @@
     
     {
         "id": "q005",
+        "set": "dev1",
         "type": "unanswerable",
         "language": "en",
         "question": "What capital requirements apply to banks under Basel III?",
+        "expected_answer": "The documents do not contain this information.",
+        "source_doc": null,
+        "source_article": null,
+        "answerable": false
+    },
+    {
+        "id":"q006",
+        "set": "dev2",
+        "type":"direct_lookup",
+        "language":"en",
+        "question":"What is AI system under the AI act?",
+        "expected_answer":"AI system means a machine-based system that is designed to operate with varying levels of autonomy and that may exhibit adaptiveness after deployment, and that, for explicit or implicit objectives, infers, from the input it receives,how to generate outputs such as predictions, content, recommendations, or decisions that can influence physical or virtual environments",
+        "key_facts": [
+            "machine-based system",
+            "varying levels of autonomy",
+            "adaptiveness after deployment",
+            "infers",
+            "influence physical or virtual environments"
+        ],
+        "min_key_facts": 3,
+        "source_doc": "ai_act_de",
+        "source_article": "3",
+        "answerable": true
+    },
+    {
+        "id": "q007",
+        "set": "dev2",
+        "type": "multi_passage",
+        "language": "en",
+        "question": "What must the management body of a financial entity do regarding ICT risk under DORA?",
+        "expected_answer": "The management body shall define, approve, oversee and be responsible for the implementation of all arrangements related to the ICT risk management framework. It shall: bear the ultimate responsibility for managing the financial entity's ICT risk; put in place policies ensuring high standards of availability, authenticity, integrity and confidentiality of data; set clear roles and responsibilities for all ICT-related functions; bear the overall responsibility for setting and approving the digital operational resilience strategy, including the ICT risk tolerance level; approve, oversee and periodically review the ICT business continuity policy and ICT response and recovery plans; approve and periodically review the ICT internal audit plans, ICT audits and material modifications to them; allocate and periodically review the appropriate budget for digital operational resilience needs, including ICT security awareness programmes, training and ICT skills; approve and periodically review the policy on the use of ICT services provided by ICT third-party service providers; and put in place reporting channels to be informed of arrangements with ICT third-party service providers, planned material changes, their potential impact, and major ICT-related incidents.",
+        "key_facts": [
+        "ultimate responsibility",
+        "digital operational resilience strategy",
+        "ICT business continuity policy",
+        "ICT internal audit plans",
+        "reporting channels",
+        "ICT third-party service providers"
+        ],
+        "min_key_facts": 4,
+        "source_doc": "dora_en",
+        "source_article": "5",
+        "answerable": true
+    },
+    {
+        "id": "q008",
+        "set": "dev2",
+        "type": "direct_lookup",
+        "language": "en",
+        "question": "What must providers ensure for AI systems intended to interact directly with natural persons, and when does this obligation not apply?",
+        "expected_answer": "Providers shall ensure that such AI systems are designed and developed so that the natural persons concerned are informed that they are interacting with an AI system, unless this is obvious from the point of view of a reasonably well-informed, observant and circumspect natural person, taking into account the circumstances and the context of use. The obligation does not apply to AI systems authorised by law to detect, prevent, investigate or prosecute criminal offences, subject to appropriate safeguards for the rights and freedoms of third parties, unless those systems are available for the public to report a criminal offence.",
+        "key_facts": [
+        "interacting with an AI system",
+        "reasonably well-informed",
+        "criminal offences"
+        ],
+        "required_key_facts": ["interacting with an AI system"],
+        "min_key_facts": 2,
+        "source_doc": "ai_act_en",
+        "source_article": "50",
+        "answerable": true
+    },
+    {
+        "id": "q009",
+        "set": "dev2",
+        "type": "german",
+        "language": "de",
+        "question": "Was ist ein schwerwiegender IKT-bezogener Vorfall nach DORA?",
+        "expected_answer": "Ein schwerwiegender IKT-bezogener Vorfall ist ein IKT-Vorfall, der umfassende nachteilige Auswirkungen auf die Netzwerk- und Informationssysteme hat, die kritische oder wichtige Funktionen des Finanzunternehmens unterstützen.",
+        "key_facts": [
+        "IKT-Vorfall",
+        "umfassende nachteilige Auswirkungen",
+        "Netzwerk- und Informationssysteme",
+        "kritische oder wichtige Funktionen"
+        ],
+        "required_key_facts": ["umfassende nachteilige Auswirkungen"],
+        "min_key_facts": 3,
+        "source_doc": "dora_de",
+        "source_article": "3",
+        "answerable": true
+    },
+    {
+        "id": "q010",
+        "set": "dev2",
+        "type": "unanswerable",
+        "language": "en",
+        "question": "Within how many hours must a personal data breach be reported to the supervisory authority under the GDPR?",
         "expected_answer": "The documents do not contain this information.",
         "source_doc": null,
         "source_article": null,

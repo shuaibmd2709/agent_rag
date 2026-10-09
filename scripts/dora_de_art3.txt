@@ -1,0 +1,191 @@
+Artikel 3
+Begriffsbestimmungen
+Für die Zwecke dieser Verordnung bezeichnet der Ausdruck:
+1.
+„digitale operationale Resilienz“ die Fähigkeit eines Finanzunternehmens, seine operative Integrität und Betriebszuver­
+lässigkeit aufzubauen, zu gewährleisten und zu überprüfen, indem es entweder direkt oder indirekt durch Nutzung der
+von IKT-Drittdienstleistern bereitgestellten Dienste das gesamte Spektrum an IKT-bezogenen Fähigkeiten sicherstellt,
+die erforderlich sind, um die Sicherheit der Netzwerk- und Informationssysteme zu gewährleisten, die von einem
+Finanzunternehmen genutzt werden und die kontinuierliche Erbringung von Finanzdienstleistungen und deren
+Qualität, einschließlich bei Störungen, unterstützen;
+2.
+„Netzwerk- und Informationssystem“ ein Netz- und Informationssystem im Sinne von Artikel 6 Nummer 1 der
+Richtlinie (EU) 2022/2555;
+3.
+„IKT-Altsystem“ ein IKT-System, das das Ende seines Lebenszyklus (Ende seiner Lebensdauer) erreicht hat, aus
+technologischen oder wirtschaftlichen Gründen nicht für Upgrades oder Fehlerbehebungen in Frage kommt oder
+nicht mehr von seinem Anbieter oder einem IKT-Drittdienstleister unterstützt wird, das allerdings weiterhin genutzt
+wird und die Funktionen des Finanzunternehmens unterstützt;
+4.
+„Sicherheit von Netzwerk- und Informationssystemen“ die Sicherheit von Netz- und Informationssystemen im Sinne
+von Artikel 6 Nummer 2 der Richtlinie (EU) 2022/2555;
+5.
+„IKT-Risiko“ jeden vernünftigerweise identifizierbaren Umstand im Zusammenhang mit der Nutzung von Netzwerk-
+und Informationssystemen, der bei Eintritt durch die damit einhergehenden nachteiligen Auswirkungen im digitalen
+oder physischen Umfeld die Sicherheit der Netzwerk- und Informationssysteme, jeglicher technologieabhängiger
+Instrumente oder Prozesse, von Geschäften und Prozessen oder der Bereitstellung von Diensten beeinträchtigen kann.
+6.
+„Informationsasset“ eine Sammlung materieller oder immaterieller Informationen, die geschützt werden sollten;
+7.
+„IKT-Asset“ eine Software oder Hardware in den Netzwerk- und Informationssystemen, die das Finanzunternehmen
+nutzt;
+8.
+„IKT-bezogener Vorfall“ ein von dem Finanzunternehmen nicht geplantes Ereignis bzw. eine entsprechende Reihe
+verbundener Ereignisse, das bzw. die die Sicherheit der Netzwerk- und Informationssysteme beeinträchtigt und
+nachteilige Auswirkungen auf die Verfügbarkeit, Authentizität, Integrität oder Vertraulichkeit von Daten oder auf die
+vom Finanzunternehmen erbrachten Dienstleistungen hat;
+9.
+„zahlungsbezogener Betriebs- oder Sicherheitsvorfall“ ein von den in Artikel 2 Absatz 1 Buchstaben a bis d
+aufgeführten Finanzunternehmen nicht geplantes Ereignis bzw. eine entsprechende Reihe verbundener Ereignisse,
+unabhängig davon, ob es sich um IKT-bezogene Vorfälle handelt oder nicht, das bzw. die nachteilige Auswirkungen
+auf die Verfügbarkeit, Authentizität, Integrität oder Vertraulichkeit zahlungsbezogener Daten oder auf die vom
+Finanzunternehmen bereitgestellten zahlungsbezogenen Dienste hat;
+10. „schwerwiegender IKT-bezogener Vorfall“ einen IKT-Vorfall, der umfassende nachteilige Auswirkungen auf die
+Netzwerk- und Informationssysteme hat, die kritische oder wichtige Funktionen des Finanzunternehmens
+unterstützen;
+11. „schwerwiegender zahlungsbezogener Betriebs- oder Sicherheitsvorfall“ einen zahlungsbezogenen Betriebs- oder
+Sicherheitsvorfall, der umfassende nachteilige Auswirkungen auf die bereitgestellten zahlungsbezogenen Dienste hat;
+12. „Cyberbedrohung“ eine Cyberbedrohung im Sinne von Artikel 2 Nummer 8 der Verordnung (EU) 2019/881;
+13. „erhebliche Cyberbedrohung“ eine Cyberbedrohung, deren technische Merkmale darauf hindeuten, dass sie das
+Potenzial haben könnte, einen schwerwiegenden IKT-bezogenen Vorfall oder einen schwerwiegenden
+zahlungsbezogenen Betriebs- oder Sicherheitsvorfall zu verursachen;
+14. „Cyberangriff“ einen böswilligen IKT-bezogenen Vorfall, der auf den Versuch eines Angreifers zurückgeht, einen
+Vermögenswert zu zerstören, freizulegen, zu verändern, zu deaktivieren, zu entwenden oder auf unberechtigte Weise
+auf diesen Vermögenswert zuzugreifen oder ihn auf unberechtigte Weise zu nutzen;
+15. „Bedrohungsanalyse“ Informationen, die aggregiert, umgewandelt, analysiert, ausgewertet oder erweitert wurden, um
+den notwendigen Kontext für die Entscheidungsfindung zu schaffen und ein relevantes und ausreichendes Verständnis
+für die Abmilderung der Auswirkungen eines IKT-bezogenen Vorfalls oder einer Cyberbedrohung zu ermöglichen,
+einschließlich der technischen Einzelheiten eines Cyberangriffs, der für den Angriff verantwortlichen Personen und
+ihres Modus Operandi und ihrer Beweggründe;
+16. „Schwachstelle“ eine Schwachstelle, Empfindlichkeit oder Fehlfunktion eines Vermögenswerts, eines Systems, eines
+Prozesses oder einer Kontrolle, die ausgenutzt werden kann;
+17. „bedrohungsorientierte Penetrationstests (TLPT — Threat-Led Penetration Testing)“ einen Rahmen, der Taktik,
+Techniken und Verfahren realer Angreifer, die als echte Cyberbedrohung empfunden werden, nachbildet und einen
+kontrollierten, maßgeschneiderten, erkenntnisgestützten (Red-Team-) Test der kritischen Live-Produktionssysteme des
+Finanzunternehmens ermöglicht;
+18. „IKT-Drittparteienrisiko“ ein IKT-bezogenes Risiko, das für ein Finanzunternehmen im Zusammenhang mit dessen
+Nutzung von IKT-Dienstleistungen entstehen kann, die von IKT-Drittdienstleistern oder deren Unterauftragnehmern,
+einschließlich über Vereinbarungen zur Auslagerung, bereitgestellt werden;
+19. „IKT-Drittdienstleister“ ein Unternehmen, das IKT-Dienstleistungen bereitstellt;
+20. „gruppeninterner IKT-Dienstleister“ ein Unternehmen, das Teil einer Finanzgruppe ist und überwiegend IKT-
+Dienstleistungen für Finanzunternehmen derselben Gruppe oder für Finanzunternehmen, die demselben instituts­
+bezogenen Sicherungssystem angehören, bereitstellt, einschließlich deren Mutterunternehmen, Tochterunternehmen
+und Zweigniederlassungen oder anderer Unternehmen, die in gemeinsamem Eigentum oder unter gemeinsamer
+Kontrolle stehen;
+21. „IKT-Dienstleistungen“ digitale Dienste und Datendienste, die über IKT-Systeme einem oder mehreren internen oder
+externen Nutzern dauerhaft bereitgestellt werden, einschließlich Hardware als Dienstleistung und Hardwaredienst­
+leistungen, wozu auch technische Unterstützung durch den Hardwareanbieter mittels Software- oder Firmware-
+Aktualisierungen gehört, mit Ausnahme herkömmlicher analoger Telefondienste;
+22. „kritische oder wichtige Funktion“ eine Funktion, deren Ausfall die finanzielle Leistungsfähigkeit eines
+Finanzunternehmens oder die Solidität oder Fortführung seiner Geschäftstätigkeiten und Dienstleistungen erheblich
+beeinträchtigen würde oder deren unterbrochene, fehlerhafte oder unterbliebene Leistung die fortdauernde Einhaltung
+der Zulassungsbedingungen und -verpflichtungen eines Finanzunternehmens oder seiner sonstigen Verpflichtungen
+nach dem anwendbaren Finanzdienstleistungsrecht erheblich beeinträchtigen würde;
+23. „kritischer IKT-Drittdienstleister“ einen IKT-Drittdienstleister, der gemäß Artikel 31 als kritisch eingestuft wurde;
+24. „IKT-Drittdienstleister mit Sitz in einem Drittland“ einen IKT-Drittdienstleister, bei dem es sich um eine in einem
+Drittland niedergelassene juristische Person handelt, die mit einem Finanzunternehmen eine vertragliche
+Vereinbarung über die Bereitstellung von IKT-Dienstleistungen geschlossen hat;
+25. „Tochterunternehmen“ ein Tochterunternehmen im Sinne von Artikel 2 Nummer 10 und Artikel 22 der Richtlinie
+2013/34/EU;
+26. „Gruppe“ eine Gruppe im Sinne von Artikel 2 Nummer 11 der Richtlinie 2013/34/EU;
+27. „Mutterunternehmen“ ein Mutterunternehmen im Sinne von Artikel 2 Nummer 9 und Artikel 22 der Richtlinie
+2013/34/EU;
+28. „IKT-Unterauftragnehmer mit Sitz in einem Drittland“ einen IKT-Unterauftragnehmer, bei dem es sich um eine in
+einem Drittland niedergelassene juristische Person handelt, die mit einem IKT-Drittdienstleister oder einem IKT-
+Drittdienstleister mit Sitz in einem Drittland eine vertragliche Vereinbarung geschlossen hat;
+29. „IKT-Konzentrationsrisiko“ die Exposition gegenüber einzelnen oder mehreren verbundenen kritischen IKT-
+Drittdienstleistern, die zu einer gewissen Abhängigkeit von diesen Dienstleistern führt, sodass die Nichtverfügbarkeit,
+der Ausfall oder sonstige Defizite dieser Dienstleister die Fähigkeit eines Finanzunternehmens gefährden könnten,
+kritische oder wichtige Funktionen zu erfüllen, oder bei dem Finanzunternehmen andere Formen nachteiliger
+Auswirkungen, einschließlich großer Verluste, herbeiführen oder die finanzielle Stabilität der Union insgesamt
+gefährden könnten;
+30. „Leitungsorgan“ ein Leitungsorgan im Sinne von Artikel 4 Absatz 1 Nummer 36 der Richtlinie 2014/65/EU, von
+Artikel 3 Absatz 1 Nummer 7 der Richtlinie 2013/36/EU, von Artikel 2 Absatz 1 Buchstabe s der Richtlinie
+2009/65/EG des Europäischen Parlaments und des Rates (31), von Artikel 2 Absatz 1 Nummer 45 der Verordnung (EU)
+Nr. 909/2014, von Artikel 3 Absatz 1 Nummer 20 der Verordnung (EU) 2016/1011 sowie im Sinne der einschlägigen
+Vorschrift der Verordnung über Märkte von Krypto-Werten oder die entsprechenden Personen, die das Unternehmen
+tatsächlich leiten oder im Einklang mit dem einschlägigen Unionsrecht oder nationalen Recht Schlüsselfunktionen
+wahrnehmen;
+31. „Kreditinstitut“ ein Kreditinstitut im Sinne von Artikel 4 Absatz 1 Nummer 1 der Verordnung (EU) Nr. 575/2013 des
+Europäischen Parlaments und des Rates (32);
+32. „nach der Richtlinie 2013/36/EU ausgenommenes Institut“ eine in Artikel 2 Absatz 5 Nummern 4 bis 23 der Richtlinie
+2013/36/EU aufgeführte Einrichtung;
+33. „Wertpapierfirma“ eine Wertpapierfirma im Sinne von Artikel 4 Absatz 1 Nummer 1 der Richtlinie 2014/65/EU;
+34. „kleine und nicht verflochtene Wertpapierfirma“ eine Wertpapierfirma, die die in Artikel 12 Absatz 1 der Verordnung
+(EU) 2019/2033 des Europäischen Parlaments und des Rates (33) genannten Bedingungen erfüllt;
+35. „Zahlungsinstitut“ ein Zahlungsinstitut im Sinne von Artikel 4 Nummer 4 der Richtlinie (EU) 2015/2366;
+36. „nach der Richtlinie (EU) 2015/2366 ausgenommenes Zahlungsinstitut“ ein Zahlungsinstitut, für das eine Ausnahme
+nach Artikel 32 Absatz 1 der Richtlinie (EU) 2015/2366 gilt;
+37. „Kontoinformationsdienstleister“ einen Kontoinformationsdienstleister im Sinne von Artikel 33 Absatz 1 der
+Richtlinie (EU) 2015/2366;
+38. „E-Geld-Institut“ ein E-Geld-Institut im Sinne von Artikel 2 Nummer 1 der Richtlinie 2009/110/EG;
+39. „nach der Richtlinie 2009/110/EG ausgenommenes E-Geld-Institut“ ein E-Geld-Institut, für das eine Ausnahme nach
+Artikel 9 Absatz 1 der Richtlinie 2009/110/EG gilt;
+40. „zentrale Gegenpartei“ eine zentrale Gegenpartei im Sinne von Artikel 2 Nummer 1 der Verordnung (EU)
+Nr. 648/2012;
+41. „Transaktionsregister“ ein Transaktionsregister im Sinne von Artikel 2 Nummer 2 der Verordnung (EU) Nr. 648/2012;
+42. „Zentralverwahrer“ ein Zentralverwahrer im Sinne von Artikel 2 Absatz 1 Nummer 1 der Verordnung (EU)
+Nr. 909/2014;
+43. „Handelsplatz“ einen Handelsplatz im Sinne von Artikel 4 Absatz 1 Nummer 24 der Richtlinie 2014/65/EU.
+44. „Verwalter alternativer Investmentfonds“ einen Verwalter alternativer Investmentfonds im Sinne von Artikel 4 Absatz 1
+Buchstabe b der Richtlinie 2011/61/EU;
+45. „Verwaltungsgesellschaft“ eine Verwaltungsgesellschaft im Sinne von Artikel 2 Absatz 1 Buchstabe b der Richtlinie
+2009/65/EG.
+46. „Datenbereitstellungsdienst“ einen in Artikel 2 Absatz 1 Nummern 34 bis 36 der Verordnung (EU) Nr. 600/2014
+genannten Datenbereitstellungsdienst im Sinne der genannten Verordnung;
+47. „Versicherungsunternehmen“ ein Versicherungsunternehmen im Sinne von Artikel 13 Nummer 1 der Richtlinie
+2009/138/EG;
+48. „Rückversicherungsunternehmen“ ein Rückversicherungsunternehmen im Sinne von Artikel 13 Nummer 4 der
+Richtlinie 2009/138/EG;
+(31) Richtlinie 2009/65/EG des Europäischen Parlaments und des Rates vom 13. Juli 2009 zur Koordinierung der Rechts- und
+Verwaltungsvorschriften betreffend bestimmte Organismen für gemeinsame Anlagen in Wertpapieren (OGAW) (ABl. L 302 vom
+17.11.2009, S. 32).
+(32) Verordnung (EU) Nr. 575/2013 des Europäischen Parlaments und des Rates vom 26. Juni 2013 über Aufsichtsanforderungen an
+Kreditinstitute und zur Änderung der Verordnung (EU) Nr. 648/2012 (ABl. L 176 vom 27.6.2013, S. 1).
+(33) Verordnung (EU) 2019/2033 des Europäischen Parlaments und des Rates vom 27. November 2019 über Aufsichtsanforderungen an
+Wertpapierfirmen und zur Änderung der Verordnungen (EU) Nr. 1093/2010, (EU) Nr. 575/2013, (EU) Nr. 600/2014 und (EU)
+Nr. 806/2014 (ABl. L 314 vom 5.12.2019, S. 1).
+49. „Versicherungsvermittler“ einen Versicherungsvermittler im Sinne von Artikel 2 Absatz 1 Nummer 3 der Richtlinie
+(EU) 2016/97 des Europäischen Parlaments und des Rates (34);
+50. „Versicherungsvermittler in Nebentätigkeit“ einen Versicherungsvermittler in Nebentätigkeit im Sinne von Artikel 2
+Absatz 1 Nummer 4 der Richtlinie (EU) 2016/97;
+51. „Rückversicherungsvermittler“ einen Rückversicherungsvermittler im Sinne von Artikel 2 Absatz 1 Nummer 5 der
+Richtlinie (EU) 2016/97;
+52. „Einrichtung der betrieblichen Altersversorgung“ eine Einrichtung der betrieblichen Altersversorgung im Sinne von
+Artikel 6 Nummer 1 der Richtlinie (EU) 2016/2341;
+53. „kleine Einrichtung der betrieblichen Altersversorgung“ eine Einrichtung der betrieblichen Altersversorgung, die
+Altersversorgungssysteme mit insgesamt weniger als 100 Versorgungsanwärtern betreibt;
+54. „Ratingagentur“ eine Ratingagentur im Sinne von Artikel 3 Absatz 1 Buchstabe b der Verordnung (EG) Nr. 1060/2009;
+55. „Anbieter von Krypto-Dienstleistungen“ einen Anbieter von Krypto-Dienstleistungen im Sinne der einschlägigen
+Vorschrift der Verordnung über Märkte von Krypto-Werten;
+56. „Emittent wertreferenzierter Token“ einen Emittenten „wertreferenzierter Token“ im Sinne der einschlägigen Vorschrift
+der Verordnung über Märkte von Krypto-Werten;
+57. „Administrator kritischer Referenzwerte“ einen Administrator „kritischer Referenzwerte“ im Sinne von Artikel 3
+Absatz 1 Nummer 25 der Verordnung (EU) 2016/1011;
+58. „Schwarmfinanzierungsdienstleister“ einen Schwarmfinanzierungsdienstleister im Sinne von Artikel 2 Absatz 1
+Buchstabe e der Verordnung (EU) 2020/1503 des Europäischen Parlaments und des Rates (35);
+59. „Verbriefungsregister“ ein Verbriefungsregister im Sinne von Artikel 2 Nummer 23 der Verordnung (EU) 2017/2402
+des Europäischen Parlaments und des Rates (36);
+60. „Kleinstunternehmen“ ein Finanzunternehmen, bei dem es sich nicht um einen Handelsplatz, eine zentrale
+Gegenpartei, ein Transaktionsregister oder einen Zentralverwahrer handelt, das weniger als zehn Personen beschäftigt
+und dessen Jahresumsatz bzw. -bilanzsumme 2 Mio. EUR nicht überschreitet;
+61. „federführende Überwachungsbehörde“ die gemäß Artikel 31 Absatz 1 Buchstabe b dieser Verordnung benannte
+Europäische Aufsichtsbehörde;
+62. „Gemeinsamer Ausschuss“ den jeweils in Artikel 54 der Verordnung (EU) Nr. 1093/2010, der Verordnung (EU)
+Nr. 1094/2010 und der Verordnung (EU) Nr. 1095/2010 genannten Ausschuss;
+63. „Kleinunternehmen“ ein Finanzunternehmen, das 10 oder mehr, aber weniger als 50 Personen beschäftigt und dessen
+Jahresumsatz bzw. -bilanzsumme 2 Mio. EUR überschreitet, nicht jedoch 10 Mio. EUR;
+64. „mittleres Unternehmen“ ein Finanzunternehmen, das kein Kleinunternehmen ist, das weniger als 250 Personen
+beschäftigt und dessen Jahresumsatz 50 Mio. EUR und/oder dessen Jahresbilanzsumme 43 Mio. EUR nicht
+überschreitet;
+65. „staatliche Behörde“ jede staatliche Stelle oder sonstige Stelle der öffentlichen Verwaltung, einschließlich der nationalen
+Zentralbanken.
+(34) Richtlinie (EU) 2016/97 des Europäischen Parlaments und des Rates vom 20. Januar 2016 über Versicherungsvertrieb (ABl. L 26 vom
+2.2.2016, S. 19).
+(35) Verordnung (EU) 2020/1503 des Europäischen Parlaments und des Rates vom 7. Oktober 2020 über Europäische Schwarmfinanzie­
+rungsdienstleister für Unternehmen und zur Änderung der Verordnung (EU) 2017/1129 und der Richtlinie (EU) 2019/1937
+(ABl. L 347 vom 20.10.2020, S. 1).
+(36) Verordnung (EU) 2017/2402 des Europäischen Parlaments und des Rates vom 12. Dezember 2017 zur Festlegung eines allgemeinen
+Rahmens für Verbriefungen und zur Schaffung eines spezifischen Rahmens für einfache, transparente und standardisierte Verbriefung
+und zur Änderung der Richtlinien 2009/65/EG, 2009/138/EG, 2011/61/EU und der Verordnungen (EG) Nr. 1060/2009 und (EU)
+Nr. 648/2012 (ABl. L 347 vom 28.12.2017, S. 35).

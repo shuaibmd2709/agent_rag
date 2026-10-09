@@ -54,14 +54,16 @@ def score_question(q, result):
         "answer_hit": f"{len(in_answer)}/{len(facts)}",
     }
 
-
 def main():
     parser = argparse.ArgumentParser()
+    parser.add_argument("--set", default="dev1", choices=["dev1", "dev2", "all"])
     parser.add_argument("--system", default="baseline", choices=SYSTEMS)
     args = parser.parse_args()
 
     ask = importlib.import_module(SYSTEMS[args.system]).ask
     golden = json.loads(Path("eval/golden_set.json").read_text(encoding="utf-8"))
+    if args.set != "all":
+        golden = [q for q in golden if q.get("set", "dev1") == args.set]
 
     rows = []
     for q in golden:
@@ -75,7 +77,7 @@ def main():
     passed = sum(r["passed"] for r in rows)
     print(f"\nScore: {passed}/{len(rows)}")
 
-    out = Path(f"eval/results_{args.system}.json")
+    out = Path(f"eval/results_{args.system}_{args.set}.json")
     out.write_text(json.dumps(rows, indent=2), encoding="utf-8")
 
 
