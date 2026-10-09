@@ -61,7 +61,6 @@ def ask(question: str) -> dict:
         ],
     }
 
-
 if __name__ == "__main__":
     result = ask(" ".join(sys.argv[1:]))
     print("\nANSWER:\n", result["answer"])

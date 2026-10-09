@@ -23,9 +23,9 @@
   {
     "id": "q009",
     "type": "german",
-    "passed": false,
-    "context_hit": "0/4",
-    "answer_hit": "0/4"
+    "passed": true,
+    "context_hit": "4/4",
+    "answer_hit": "4/4"
   },
   {
     "id": "q010",

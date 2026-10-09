@@ -2,7 +2,7 @@ import re
 
 from src.ingest import load_all
 
-HARD_MARKER = re.compile(r"^\(\d+\)(\s|$)")
+HARD_MARKER = re.compile(r"^(\(\d+\)(\s|$)|\d{1,3}\.\s+[„“\"‘‚'])")
 SOFT_MARKER = re.compile(r"^(\d{1,3}\.$|\([a-z]{1,2}\)\s)")
 SOFT_MIN = 500
 HARD_MAX = 1100
@@ -22,6 +22,16 @@ def chunk_section(section):
     title = lines[1] if len(lines) > 1 else ""
     label = f"{DOC_LABEL.get(doc, doc)} | {lines[0]} | {title}"
     body = lines[2:]
+    merged, i = [], 0
+    while i < len(body):
+        if (re.match(r"^\d{1,3}\.$", body[i]) and i + 1 < len(body)
+                and body[i + 1][0] in "„“\"‘‚'"):
+            merged.append(body[i] + " " + body[i + 1])
+            i += 2
+        else:
+            merged.append(body[i])
+            i += 1
+    body = merged
 
     chunks, cur, cur_len = [], [], 0
 
@@ -83,3 +93,4 @@ if __name__ == "__main__":
         print(f"\n=== {doc}, '{pattern}': {len(hits)} matching chunk(s) ===")
         if hits:
             print(hits[0]["text"])
+
