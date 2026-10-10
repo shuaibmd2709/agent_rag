@@ -5,7 +5,7 @@
     "passed": true,
     "context_hit": "5/5",
     "answer_hit": "5/5",
-    "cited": false
+    "cited": true
   },
   {
     "id": "q007",
@@ -21,7 +21,7 @@
     "passed": true,
     "context_hit": "3/3",
     "answer_hit": "3/3",
-    "cited": false
+    "cited": true
   },
   {
     "id": "q009",
