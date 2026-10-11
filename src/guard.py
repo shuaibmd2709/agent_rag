@@ -32,3 +32,25 @@ def check(answer, context, min_overlap=0.6):
         "weak_lines": weak_lines,
         "flagged": bool(unsupported_numbers or weak_lines),
     }
+
+REFUSAL_MARKERS = [
+    "i don't know", "i do not know", "does not contain", "do not contain",
+    "not mentioned", "ich weiß nicht", "nicht enthalten",
+]
+
+
+def is_refusal(answer):
+    a = answer.lower().replace("’", "'")
+    return any(m in a for m in REFUSAL_MARKERS)
+
+
+def used_chunks(answer, chunks, min_shared=3, rel=0.3):
+    toks = _tokens(answer)
+    a_grams = {tuple(toks[i:i + 4]) for i in range(len(toks) - 3)}
+    scored = []
+    for c in chunks:
+        ct = _tokens(c["text"])
+        c_grams = {tuple(ct[i:i + 4]) for i in range(len(ct) - 3)}
+        scored.append((len(a_grams & c_grams), c))
+    best = max((s for s, _ in scored), default=0)
+    return [c for s, c in scored if s >= min_shared and s >= rel * best]

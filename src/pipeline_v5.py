@@ -1,6 +1,6 @@
 import sys
 
-from src.guard import check
+from src.guard import check, is_refusal, used_chunks
 from src.llm import get_llm
 from src.pipeline_v3 import retrieve
 
@@ -15,26 +15,60 @@ Context:
 Question: {question}
 Answer:"""
 
+RETRY_NOTE = """
 
-def sources_line(chunks):
+A previous draft of this answer contained content that is not in the context:
+{problems}
+Write the answer again. Use only statements and numbers that appear in the context."""
+
+
+def sources_line(chunks, answer):
+    if is_refusal(answer):
+        return "Sources: none (the documents do not contain an answer)"
     seen = []
-    for c in chunks:
+    for c in used_chunks(answer, chunks):
         s = f"{c['doc']} article {c['article']}"
         if s not in seen:
             seen.append(s)
-    return "Sources: " + "; ".join(seen)
+    return "Sources: " + "; ".join(seen) if seen else "Sources: none matched"
+
+
+def describe(guard):
+    parts = []
+    if guard["unsupported_numbers"]:
+        parts.append("numbers not in the context: " + ", ".join(guard["unsupported_numbers"]))
+    for _, line in guard["weak_lines"]:
+        parts.append("unsupported line: " + line)
+    return "\n".join(parts)
 
 
 def ask(question: str) -> dict:
     chunks = retrieve(question)
     context = "\n\n".join(c["text"] for c in chunks)
-    answer = get_llm().invoke(
-        PROMPT_V5.format(context=context, question=question)
-    ).content
+    prompt = PROMPT_V5.format(context=context, question=question)
+    llm = get_llm()
+
+    answer = llm.invoke(prompt).content
+    guard = check(answer, context)
+    regenerated = False
+
+    if guard["flagged"]:
+        retry = llm.invoke(prompt + RETRY_NOTE.format(problems=describe(guard))).content
+        retry_guard = check(retry, context)
+        regenerated = True
+        if not retry_guard["flagged"]:
+            answer, guard = retry, retry_guard
+
+    warning = None
+    if guard["flagged"]:
+        warning = "Some content in this answer could not be verified against the sources: " + describe(guard)
+
     return {
         "answer": answer,
-        "sources": sources_line(chunks),
-        "guard": check(answer, context),
+        "sources": sources_line(chunks, answer),
+        "guard": guard,
+        "regenerated": regenerated,
+        "warning": warning,
         "contexts": [
             {"doc": c["doc"], "article": c["article"],
              "page": c["page"], "text": c["text"]}
@@ -47,4 +81,7 @@ if __name__ == "__main__":
     r = ask(" ".join(sys.argv[1:]))
     print("\nANSWER:\n", r["answer"])
     print("\n" + r["sources"])
-    print("GUARD:", r["guard"])
+    if r["regenerated"]:
+        print("(regenerated once after the guard flagged the first draft)")
+    if r["warning"]:
+        print("WARNING:", r["warning"])
