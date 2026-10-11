@@ -1,0 +1,42 @@
+[
+  {
+    "id": "q001",
+    "type": "direct_lookup",
+    "passed": true,
+    "context_hit": "3/3",
+    "answer_hit": "2/3",
+    "cited": true
+  },
+  {
+    "id": "q002",
+    "type": "multi_passage",
+    "passed": true,
+    "context_hit": "5/5",
+    "answer_hit": "5/5",
+    "cited": true
+  },
+  {
+    "id": "q003",
+    "type": "cross_document",
+    "passed": true,
+    "context_hit": "5/5",
+    "answer_hit": "5/5",
+    "cited": true
+  },
+  {
+    "id": "q004",
+    "type": "german",
+    "passed": true,
+    "context_hit": "5/5",
+    "answer_hit": "5/5",
+    "cited": true
+  },
+  {
+    "id": "q005",
+    "type": "unanswerable",
+    "passed": true,
+    "context_hit": null,
+    "answer_hit": null,
+    "cited": null
+  }
+]

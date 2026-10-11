@@ -61,7 +61,13 @@ def ask(question: str) -> dict:
 
     warning = None
     if guard["flagged"]:
-        warning = "Some content in this answer could not be verified against the sources: " + describe(guard)
+        warning = "The generated answer could not be verified against the sources: " + describe(guard)
+        passages = used_chunks(answer, chunks) or chunks[:2]
+        answer = (
+            "I could not verify my own answer against the sources, "
+            "so here are the relevant passages instead:\n\n"
+            + "\n\n".join(c["text"] for c in passages)
+        )
 
     return {
         "answer": answer,

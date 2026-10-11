@@ -62,7 +62,7 @@ def score_question(q, result):
         "id": q["id"], "type": q["type"], "passed": passed,
         "context_hit": f"{len(in_context)}/{len(facts)}",
         "answer_hit": f"{len(in_answer)}/{len(facts)}",
-        "cited":cited_ok(q,answer),
+        "cited": cited_ok(q, answer + " " + result.get("sources", "")),
     }
 
 def main():
