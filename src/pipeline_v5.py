@@ -2,7 +2,7 @@ import sys
 
 from src.guard import check, is_refusal, used_chunks
 from src.llm import get_llm
-from src.pipeline_v3 import retrieve
+from src.pipeline_v3 import _index, retrieve
 
 PROMPT_V5 = """Answer the question using only the context below.
 Copy the wording of the context as closely as possible.
@@ -41,6 +41,18 @@ def describe(guard):
         parts.append("unsupported line: " + line)
     return "\n".join(parts)
 
+def complete_passages(passages):
+    by_article, position = _index()
+    groups = {}
+    for c in passages:
+        loc = position.get(c["text"])
+        if loc:
+            groups.setdefault(loc[0], set()).add(loc[1])
+    out = []
+    for key, idxs in groups.items():
+        last = min(max(idxs) + 1, len(by_article[key]) - 1)
+        out.extend(by_article[key][j] for j in range(min(idxs), last + 1))
+    return out
 
 def ask(question: str) -> dict:
     chunks = retrieve(question)
@@ -62,7 +74,7 @@ def ask(question: str) -> dict:
     warning = None
     if guard["flagged"]:
         warning = "The generated answer could not be verified against the sources: " + describe(guard)
-        passages = used_chunks(answer, chunks) or chunks[:2]
+        passages = complete_passages(used_chunks(answer, chunks) or chunks[:2])
         answer = (
             "I could not verify my own answer against the sources, "
             "so here are the relevant passages instead:\n\n"
