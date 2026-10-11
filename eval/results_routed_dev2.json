@@ -1,0 +1,57 @@
+[
+  {
+    "id": "q006",
+    "type": "direct_lookup",
+    "passed": true,
+    "context_hit": "5/5",
+    "answer_hit": "5/5",
+    "cited": false,
+    "fallback": false,
+    "answer": "An AI system is defined as a machine-based system that is designed to operate with varying levels of autonomy and that may exhibit adaptiveness after deployment, and that, for explicit or implicit objectives, infers, from the input it receives, how to generate outputs such as predictions, content, recommendations, or decisions that can influence physical or virtual environments.",
+    "sources": null
+  },
+  {
+    "id": "q007",
+    "type": "multi_passage",
+    "passed": true,
+    "context_hit": "4/6",
+    "answer_hit": "4/6",
+    "cited": true,
+    "fallback": false,
+    "answer": "According to the context, the management body of a financial entity must:\n\n* Bear the ultimate responsibility for managing the financial entity's ICT risk (Article 5, point (a))\n* Put in place policies that aim to ensure the maintenance of high standards of availability, authenticity, integrity, and confidentiality of data (Article 5, point (b))\n* Set clear roles and responsibilities for all ICT-related functions and establish appropriate governance arrangements (Article 5, point (c))\n* Bear the overall responsibility for setting and approving the digital operational resilience strategy, including the determination of the appropriate risk tolerance level of ICT risk (Article 5, point (d))\n* Allocate and periodically review the appropriate budget to fulfil the financial entity's digital operational resilience needs (Article 5, point (g))\n* Approve and periodically review the financial entity's policy on arrangements regarding the use of ICT services provided by ICT third-party service providers (Article 5, point (h))\n* Put in place reporting channels enabling it to be duly informed of arrangements concluded with ICT third-party service providers, planned material changes, and the potential impact of such changes on critical or important functions (Article 5, point (i))\n* Regularly review the risks identified in respect to contractual arrangements on the use of ICT services supporting critical or important functions (Article 28, point 2)\n* Maintain and update a register of information in relation to all contractual arrangements on the use of ICT services provided by ICT third-party service providers (Article 28, point 3)\n* Report to the competent authorities on the number of new arrangements on the use of ICT services, the categories of ICT third-party service providers, and the ICT services and functions being provided (Article 28, point 3)\n* Provide complete and updated information on ICT risk and on their ICT risk management framework to the competent authorities upon their request (Article 6, point 3)\n* Assign the responsibility for managing and overseeing ICT risk to a control function and ensure an appropriate level of independence of such control function (Article 6, point 4)\n* Ensure appropriate segregation and independence of ICT risk management functions, control functions, and internal audit functions (Article 6, point 4)\n* Document and review the ICT risk management framework at least once a year, or periodically in the case of microenterprises, and following supervisory instructions or conclusions derived from relevant digital operational resilience testing or audit processes (Article 6, point 5)",
+    "sources": null
+  },
+  {
+    "id": "q008",
+    "type": "direct_lookup",
+    "passed": true,
+    "context_hit": "3/3",
+    "answer_hit": "3/3",
+    "cited": false,
+    "fallback": false,
+    "answer": "Providers shall ensure that AI systems intended to interact directly with natural persons are designed and developed in such a way that the natural persons concerned are informed that they are interacting with an AI system, unless this is obvious from the point of view of a natural person who is reasonably well-informed, observant and circumspect, taking into account the circumstances and the context of use. This obligation shall not apply to AI systems authorised by law to detect, prevent, investigate or prosecute criminal offences, subject to appropriate safeguards for the rights and freedoms of third parties, unless those systems are available for the public to report a criminal offence.",
+    "sources": null
+  },
+  {
+    "id": "q009",
+    "type": "german",
+    "passed": true,
+    "context_hit": "4/4",
+    "answer_hit": "4/4",
+    "cited": true,
+    "fallback": false,
+    "answer": "Ein schwerwiegender IKT-bezogener Vorfall ist ein IKT-Vorfall, der umfassende nachteilige Auswirkungen auf die Netzwerk- und Informationssysteme hat, die kritische oder wichtige Funktionen des Finanzunternehmens unterst\u00fctzen (Artikel 3, Begriffsbestimmungen, Nr. 10).",
+    "sources": null
+  },
+  {
+    "id": "q010",
+    "type": "unanswerable",
+    "passed": true,
+    "context_hit": null,
+    "answer_hit": null,
+    "cited": null,
+    "fallback": false,
+    "answer": "I don't know. The context provided does not mention the GDPR or the time frame for reporting a personal data breach.",
+    "sources": null
+  }
+]

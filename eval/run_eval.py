@@ -11,7 +11,8 @@ SYSTEMS = {
     "reranked": "src.pipeline_v2",
     "expanded": "src.pipeline_v3",
     "cited": "src.pipeline_v4",
-    "guarded": "src.pipeline_v5"
+    "guarded": "src.pipeline_v5",
+    "routed": "src.pipeline_v6",
 }
 
 REFUSALS = [

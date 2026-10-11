@@ -1,0 +1,57 @@
+[
+  {
+    "id": "q011",
+    "type": "cross_document",
+    "passed": true,
+    "context_hit": "5/5",
+    "answer_hit": "5/5",
+    "cited": true,
+    "fallback": false,
+    "answer": "Under the EU AI Act (Article 73), providers of high-risk AI systems must report serious incidents to the market surveillance authorities of the Member States where the incident occurred.\n\nUnder DORA (Article 19), financial entities must report major ICT-related incidents to the relevant competent authority, which may be a single competent authority designated by the Member State in cases where the financial entity is subject to supervision by more than one national competent authority.\n\nIn both cases, the report must be made as soon as possible after the provider or financial entity becomes aware of the incident. The specific timeframes for reporting are as follows:\n\n* Under the EU AI Act, the report must be made immediately after the provider has established a causal link between the AI system and the serious incident, or not later than 15 days after the provider becomes aware of the incident. In cases of widespread infringement or serious incidents, the report must be made immediately, and not later than two days after the provider becomes aware of the incident. In cases of death, the report must be made immediately after the provider has established, or as soon as it suspects, a causal relationship between the high-risk AI system and the serious incident, but not later than 10 days after the date on which the provider becomes aware of the incident.\n* Under DORA, the report must be made as soon as possible after the financial entity becomes aware of the major ICT-related incident, using the templates referred to in Article 20.\n\nThe authority to which the report is made is as follows:\n\n* Under the EU AI Act, the report is made to the market surveillance authorities of the Member States where the incident occurred.\n* Under DORA, the report is made to the relevant competent authority, which may be a single competent authority designated by the Member State in cases where the financial entity is subject to supervision by more than one national competent authority. In cases where the financial entity is classified as significant, the report is made to the relevant national competent authority designated in accordance with Directive 2013/36/EU, which shall immediately transmit the report to the ECB.",
+    "sources": null
+  },
+  {
+    "id": "q012",
+    "type": "german",
+    "passed": true,
+    "context_hit": "3/3",
+    "answer_hit": "3/3",
+    "cited": false,
+    "fallback": false,
+    "answer": "Die Anbieter m\u00fcssen sicherstellen, dass KI-Systeme, die f\u00fcr die direkte Interaktion mit nat\u00fcrlichen Personen bestimmt sind, so konzipiert und entwickelt werden, dass die betreffenden nat\u00fcrlichen Personen informiert werden, dass sie mit einem KI-System interagieren, es sei denn, dies ist aus Sicht einer angemessen informierten, aufmerksamen und verst\u00e4ndigen nat\u00fcrlichen Person aufgrund der Umst\u00e4nde und des Kontexts der Nutzung offensichtlich. Diese Pflicht gilt nicht f\u00fcr gesetzlich zur Aufdeckung, Verh\u00fctung, Ermittlung oder Verfolgung von Straftaten zugelassene KI-Systeme, wenn geeignete Schutzvorkehrungen f\u00fcr die Rechte und Freiheiten Dritter bestehen, es sei denn, diese Systeme stehen der \u00d6ffentlichkeit zur Anzeige einer Straftat zur Verf\u00fcgung.",
+    "sources": null
+  },
+  {
+    "id": "q013",
+    "type": "multi_passage",
+    "passed": true,
+    "context_hit": "5/5",
+    "answer_hit": "5/5",
+    "cited": false,
+    "fallback": false,
+    "answer": "According to Annex III of the EU AI Act, the following AI use cases in the area of employment, workers' management and access to self-employment are classified as high-risk:\n\n(a) AI systems intended to be used for the recruitment or selection of natural persons, in particular to place targeted job advertisements, to analyse and filter job applications, and to evaluate candidates.\n(b) AI systems intended to be used to make decisions affecting terms of work-related relationships, the promotion or termination of work-related contractual relationships, to allocate tasks based on individual behaviour or personal traits or characteristics or to monitor and evaluate the performance and behaviour of persons in such relationships.",
+    "sources": null
+  },
+  {
+    "id": "q014",
+    "type": "cross_document",
+    "passed": true,
+    "context_hit": "4/5",
+    "answer_hit": "3/5",
+    "cited": false,
+    "fallback": false,
+    "answer": "The purpose of the AI Act is to improve the functioning of the internal market and promote the uptake of human-centric and trustworthy artificial intelligence (AI), while ensuring a high level of protection of health, safety, fundamental rights, and environmental protection, against the harmful effects of AI systems in the Union and supporting innovation.\n\nDORA (Digital Operational Resilience Act) lays down uniform requirements concerning the security of network and information systems supporting the business processes of financial entities. Specifically, it requires financial entities to:\n\n* Establish, maintain, and review a sound and comprehensive digital operational resilience testing programme as an integral part of the ICT risk-management framework.\n* Conduct a range of assessments, tests, methodologies, practices, and tools to identify weaknesses, deficiencies, and gaps in digital operational resilience.\n* Follow a risk-based approach when conducting digital operational resilience testing, taking into account the evolving landscape of ICT risk, specific risks to which the financial entity is or might be exposed, the criticality of information assets and services provided, and other factors deemed appropriate.\n\nIn other words, DORA aims to ensure that financial entities have robust digital operational resilience measures in place to prevent and respond to ICT-related incidents and cyber threats.",
+    "sources": null
+  },
+  {
+    "id": "q015",
+    "type": "german",
+    "passed": true,
+    "context_hit": "3/3",
+    "answer_hit": "2/3",
+    "cited": false,
+    "fallback": false,
+    "answer": "Die Anbieter und Betreiber von KI-Systemen ergreifen Ma\u00dfnahmen, um sicherzustellen, dass ihr Personal und andere Personen, die in ihrem Auftrag mit dem Betrieb und der Nutzung von KI-Systemen befasst sind, \u00fcber ein ausreichendes Ma\u00df an KI-Kompetenz verf\u00fcgen.",
+    "sources": null
+  }
+]
