@@ -33,13 +33,12 @@ def sources_line(chunks, answer):
             seen.append(s)
     return "Sources: " + "; ".join(seen) if seen else "Sources: none matched"
 
-
 def describe(guard):
     parts = []
     if guard["unsupported_numbers"]:
         parts.append("numbers not in the context: " + ", ".join(guard["unsupported_numbers"]))
     for _, line in guard["weak_lines"]:
-        parts.append("unsupported line: " + line)
+        parts.append("unsupported line: " + line[:90])
     return "\n".join(parts)
 
 def complete_passages(passages):
@@ -74,26 +73,22 @@ def ask(question: str) -> dict:
 
     warning = None
     if guard["flagged"]:
-        warning = "The generated answer could not be verified against the sources: " + describe(guard)
-        passages = complete_passages(used_chunks(answer, chunks) or chunks[:2])
-        answer = (
-            "I could not verify my own answer against the sources, "
-            "so here are the relevant passages instead:\n\n"
-            + "\n\n".join(c["text"] for c in passages)
-        )
-
-    return {
-        "answer": answer,
-        "sources": sources_line(chunks, answer),
-        "guard": guard,
-        "regenerated": regenerated,
-        "warning": warning,
-        "contexts": [
-            {"doc": c["doc"], "article": c["article"],
-             "page": c["page"], "text": c["text"]}
-            for c in chunks
-        ],
-    }
+        warning = "Unverified content in the generated answer: " + describe(guard)
+        if guard["unsupported_numbers"]:
+            passages = complete_passages(used_chunks(answer, chunks) or chunks[:2])
+            answer = (
+                "I could not verify my own answer against the sources, "
+                "so here are the relevant passages instead:\n\n"
+                + "\n\n".join(c["text"] for c in passages)
+            )
+        else:
+            drop = {line for _, line in guard["weak_lines"]}
+            kept = [ln for ln in answer.splitlines() if ln.strip() not in drop]
+            answer = (
+                "\n".join(kept).strip()
+                + f"\n\n(Note: {len(drop)} statement(s) were removed because "
+                "they could not be verified against the sources.)"
+            )
 
 
 if __name__ == "__main__":
