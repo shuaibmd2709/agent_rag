@@ -1,0 +1,57 @@
+[
+  {
+    "id": "q006",
+    "type": "direct_lookup",
+    "passed": true,
+    "context_hit": "5/5",
+    "answer_hit": "5/5",
+    "cited": true,
+    "fallback": false,
+    "answer": "An AI system means a machine-based system that is designed to operate with varying levels of autonomy and that may exhibit adaptiveness after deployment, and that, for explicit or implicit objectives, infers, from the input it receives, how to generate outputs such as predictions, content, recommendations, or decisions that can influence physical or virtual environments.",
+    "sources": "Sources: ai_act_en article 3"
+  },
+  {
+    "id": "q007",
+    "type": "multi_passage",
+    "passed": true,
+    "context_hit": "4/6",
+    "answer_hit": "4/6",
+    "cited": true,
+    "fallback": false,
+    "answer": "The management body of a financial entity shall:\n\n* bear the ultimate responsibility for managing the financial entity\u2019s ICT risk (Article 5, point (a));\n* put in place policies that aim to ensure the maintenance of high standards of availability, authenticity, integrity and confidentiality, of data (Article 5, point (b));\n* set clear roles and responsibilities for all ICT-related functions and establish appropriate governance arrangements to ensure effective and timely communication, cooperation and coordination among those functions (Article 5, point (c));\n* bear the overall responsibility for setting and approving the digital operational resilience strategy as referred to in Article 6(8), including the determination of the appropriate risk tolerance level of ICT risk of the financial entity, as referred to in Article 6(8), point (b) (Article 5, point (d));\n* allocate and periodically review the appropriate budget to fulfil the financial entity\u2019s digital operational resilience needs in respect of all types of resources, including relevant ICT security awareness programmes and digital operational resilience training referred to in Article 13(6), and ICT skills for all staff (Article 5, point (g));\n* approve and periodically review the financial entity\u2019s policy on arrangements regarding the use of ICT services provided by ICT third-party service providers (Article 5, point (h));\n* put in place, at corporate level, reporting channels enabling it to be duly informed of the following:\n\t+ arrangements concluded with ICT third-party service providers on the use of ICT services,\n\t+ any relevant planned material changes regarding the ICT third-party service providers,\n\t+ the potential impact of such changes on the critical or important functions subject to those arrangements, including a risk analysis summary to assess the impact of those changes, and at least major ICT-related incidents and their impact, as well as response, recovery and corrective measures (Article 5, point (i));\n* actively keep up to date with sufficient knowledge and skills to understand and assess ICT risk and its impact on the operations of the financial entity, including by following specific training on a regular basis, commensurate to the ICT risk being managed (Article 5, point 4).",
+    "sources": "Sources: dora_en article 5"
+  },
+  {
+    "id": "q008",
+    "type": "direct_lookup",
+    "passed": true,
+    "context_hit": "3/3",
+    "answer_hit": "3/3",
+    "cited": true,
+    "fallback": false,
+    "answer": "Providers shall ensure that AI systems intended to interact directly with natural persons are designed and developed in such a way that the natural persons concerned are informed that they are interacting with an AI system, unless this is obvious from the point of view of a natural person who is reasonably well-informed, observant and circumspect, taking into account the circumstances and the context of use. This obligation shall not apply to AI systems authorised by law to detect, prevent, investigate or prosecute criminal offences, subject to appropriate safeguards for the rights and freedoms of third parties, unless those systems are available for the public to report a criminal offence.",
+    "sources": "Sources: ai_act_en article 50"
+  },
+  {
+    "id": "q009",
+    "type": "german",
+    "passed": true,
+    "context_hit": "4/4",
+    "answer_hit": "4/4",
+    "cited": true,
+    "fallback": false,
+    "answer": "Ein schwerwiegender IKT-bezogener Vorfall ist ein IKT-Vorfall, der umfassende nachteilige Auswirkungen auf die Netzwerk- und Informationssysteme hat, die kritische oder wichtige Funktionen des Finanzunternehmens unterst\u00fctzen.",
+    "sources": "Sources: dora_de article 3"
+  },
+  {
+    "id": "q010",
+    "type": "unanswerable",
+    "passed": true,
+    "context_hit": null,
+    "answer_hit": null,
+    "cited": null,
+    "fallback": false,
+    "answer": "I don't know.",
+    "sources": "Sources: none (the documents do not contain an answer)"
+  }
+]

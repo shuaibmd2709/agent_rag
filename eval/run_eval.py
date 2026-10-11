@@ -13,6 +13,7 @@ SYSTEMS = {
     "cited": "src.pipeline_v4",
     "guarded": "src.pipeline_v5",
     "routed": "src.pipeline_v6",
+    "final": "src.pipeline_v7",
 }
 
 REFUSALS = [
