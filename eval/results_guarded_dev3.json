@@ -1,0 +1,57 @@
+[
+  {
+    "id": "q011",
+    "type": "cross_document",
+    "passed": true,
+    "context_hit": "5/5",
+    "answer_hit": "4/5",
+    "cited": true,
+    "fallback": false,
+    "answer": "Providers of high-risk AI systems must report serious incidents to the market surveillance authorities of the Member States where that incident occurred.\n\nFinancial entities must report major ICT-related incidents to the relevant competent authority as referred to in Article 46, or to the national competent authority designated in accordance with Article 4 of Directive 2013/36/EU, if they are classified as significant.",
+    "sources": "Sources: dora_en article 19; ai_act_en article 73"
+  },
+  {
+    "id": "q012",
+    "type": "german",
+    "passed": true,
+    "context_hit": "3/3",
+    "answer_hit": "3/3",
+    "cited": true,
+    "fallback": false,
+    "answer": "Die Anbieter stellen sicher, dass KI-Systeme, die f\u00fcr die direkte Interaktion mit nat\u00fcrlichen Personen bestimmt sind, so konzipiert und entwickelt werden, dass die betreffenden nat\u00fcrlichen Personen informiert werden, dass sie mit einem KI-System interagieren, es sei denn, dies ist aus Sicht einer angemessen informierten, aufmerksamen und verst\u00e4ndigen nat\u00fcrlichen Person aufgrund der Umst\u00e4nde und des Kontexts der Nutzung offensichtlich. Diese Pflicht gilt nicht f\u00fcr gesetzlich zur Aufdeckung, Verh\u00fctung, Ermittlung oder Verfolgung von Straftaten zugelassene KI-Systeme, wenn geeignete Schutzvorkehrungen f\u00fcr die Rechte und Freiheiten Dritter bestehen, es sei denn, diese Systeme stehen der \u00d6ffentlichkeit zur Anzeige einer Straftat zur Verf\u00fcgung.",
+    "sources": "Sources: ai_act_de article 50"
+  },
+  {
+    "id": "q013",
+    "type": "multi_passage",
+    "passed": true,
+    "context_hit": "5/5",
+    "answer_hit": "5/5",
+    "cited": true,
+    "fallback": false,
+    "answer": "AI systems intended to be used for the recruitment or selection of natural persons, in particular to place targeted job advertisements, to analyse and filter job applications, and to evaluate candidates;\nAI systems intended to be used to make decisions affecting terms of work-related relationships, the promotion or termination of work-related contractual relationships, to allocate tasks based on individual behaviour or personal traits or characteristics or to monitor and evaluate the performance and behaviour of persons in such relationships.",
+    "sources": "Sources: ai_act_en article annex-III"
+  },
+  {
+    "id": "q014",
+    "type": "cross_document",
+    "passed": false,
+    "context_hit": "2/5",
+    "answer_hit": "0/5",
+    "cited": false,
+    "fallback": false,
+    "answer": "I don't know.",
+    "sources": "Sources: none (the documents do not contain an answer)"
+  },
+  {
+    "id": "q015",
+    "type": "german",
+    "passed": true,
+    "context_hit": "3/3",
+    "answer_hit": "3/3",
+    "cited": true,
+    "fallback": false,
+    "answer": "Die Anbieter und Betreiber von KI-Systemen ergreifen Ma\u00dfnahmen, um sicherzustellen, dass ihr Personal und andere Personen, die in ihrem Auftrag mit dem Betrieb und der Nutzung von KI-Systemen befasst sind, \u00fcber ein ausreichendes Ma\u00df an KI-Kompetenz verf\u00fcgen, wobei ihre technischen Kenntnisse, ihre Erfahrung, ihre Ausbildung und Schulung und der Kontext, in dem die KI-Systeme eingesetzt werden sollen, sowie die Personen oder Personengruppen, bei denen die KI-Systeme eingesetzt werden sollen, zu ber\u00fccksichtigen sind.",
+    "sources": "Sources: ai_act_de article 4"
+  }
+]

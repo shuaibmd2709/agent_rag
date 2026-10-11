@@ -1,0 +1,57 @@
+[
+  {
+    "id": "q011",
+    "type": "cross_document",
+    "passed": true,
+    "context_hit": "5/5",
+    "answer_hit": "5/5",
+    "cited": true,
+    "fallback": false,
+    "answer": "Under the AI Act (serious incidents), providers of high-risk AI systems must report incidents to the market surveillance authorities of the Member States where the incident occurred (Article 73, paragraph 1).\n\nUnder DORA (major ICT-related incidents), financial entities must report incidents to the relevant competent authority, which may be a single authority designated by the Member State if the entity is subject to supervision by more than one authority (Article 19, paragraph 1). Credit institutions classified as significant must report incidents to the relevant national competent authority designated in accordance with Directive 2013/36/EU, which shall immediately transmit the report to the ECB (Article 19, paragraph 2).",
+    "sources": null
+  },
+  {
+    "id": "q012",
+    "type": "german",
+    "passed": true,
+    "context_hit": "3/3",
+    "answer_hit": "3/3",
+    "cited": false,
+    "fallback": false,
+    "answer": "Die Anbieter m\u00fcssen sicherstellen, dass KI-Systeme, die f\u00fcr die direkte Interaktion mit nat\u00fcrlichen Personen bestimmt sind, so konzipiert und entwickelt werden, dass die betreffenden nat\u00fcrlichen Personen informiert werden, dass sie mit einem KI-System interagieren, es sei denn, dies ist aus Sicht einer angemessen informierten, aufmerksamen und verst\u00e4ndigen nat\u00fcrlichen Person aufgrund der Umst\u00e4nde und des Kontexts der Nutzung offensichtlich.\n\nDiese Pflicht gilt nicht f\u00fcr gesetzlich zur Aufdeckung, Verh\u00fctung, Ermittlung oder Verfolgung von Straftaten zugelassene KI-Systeme, wenn geeignete Schutzvorkehrungen f\u00fcr die Rechte und Freiheiten Dritter bestehen, es sei denn, diese Systeme stehen der \u00d6ffentlichkeit zur Anzeige einer Straftat zur Verf\u00fcgung.",
+    "sources": null
+  },
+  {
+    "id": "q013",
+    "type": "multi_passage",
+    "passed": true,
+    "context_hit": "5/5",
+    "answer_hit": "5/5",
+    "cited": false,
+    "fallback": false,
+    "answer": "According to Annex III of the EU AI Act, the following AI use cases in the area of employment, workers' management and access to self-employment are classified as high-risk:\n\n(a) AI systems intended to be used for the recruitment or selection of natural persons, in particular to place targeted job advertisements, to analyse and filter job applications, and to evaluate candidates.\n(b) AI systems intended to be used to make decisions affecting terms of work-related relationships, the promotion or termination of work-related contractual relationships, to allocate tasks based on individual behaviour or personal traits or characteristics or to monitor and evaluate the performance and behaviour of persons in such relationships.",
+    "sources": null
+  },
+  {
+    "id": "q014",
+    "type": "cross_document",
+    "passed": false,
+    "context_hit": "2/5",
+    "answer_hit": "1/5",
+    "cited": false,
+    "fallback": false,
+    "answer": "I don't know. The context provided does not mention the AI Act. It appears to be a regulation related to digital operational resilience, specifically DORA (Digital Operational Resilience Act).",
+    "sources": null
+  },
+  {
+    "id": "q015",
+    "type": "german",
+    "passed": true,
+    "context_hit": "3/3",
+    "answer_hit": "3/3",
+    "cited": false,
+    "fallback": false,
+    "answer": "Die Anbieter und Betreiber von KI-Systemen ergreifen Ma\u00dfnahmen, um sicherzustellen, dass ihr Personal und andere Personen, die in ihrem Auftrag mit dem Betrieb und der Nutzung von KI-Systemen befasst sind, \u00fcber ein ausreichendes Ma\u00df an KI-Kompetenz verf\u00fcgen. Dazu sind ihre technischen Kenntnisse, ihre Erfahrung, ihre Ausbildung und Schulung sowie der Kontext, in dem die KI-Systeme eingesetzt werden sollen, zu ber\u00fccksichtigen.",
+    "sources": null
+  }
+]

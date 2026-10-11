@@ -169,5 +169,100 @@
         "source_doc": null,
         "source_article": null,
         "answerable": false
-    }
+    },
+    {
+    "id": "q011",
+    "set": "dev3",
+    "type": "cross_document",
+    "language": "en",
+    "question": "Who must report incidents to authorities under the AI Act (serious incidents) and under DORA (major ICT-related incidents), and to which authority do they report?",
+    "expected_answer": "AI Act: providers of high-risk AI systems placed on the Union market must report any serious incident to the market surveillance authorities of the Member States where the incident occurred. DORA: financial entities must report major ICT-related incidents to the relevant competent authority referred to in Article 46; where a financial entity is supervised by more than one national competent authority, Member States designate a single relevant competent authority; significant credit institutions report to the relevant national competent authority designated under Directive 2013/36/EU, which immediately transmits the report to the ECB.",
+    "key_facts": [
+      "providers of high-risk AI systems",
+      "market surveillance authorities",
+      "financial entities",
+      "relevant competent authority",
+      "ECB"
+    ],
+    "required_key_facts": ["market surveillance authorities", "relevant competent authority"],
+    "min_key_facts": 3,
+    "source_doc": ["ai_act_en", "dora_en"],
+    "source_article": ["73", "19"],
+    "answerable": true
+  },
+  {
+    "id": "q012",
+    "set": "dev3",
+    "type": "german",
+    "language": "de",
+    "question": "Was müssen Anbieter bei KI-Systemen sicherstellen, die für die direkte Interaktion mit natürlichen Personen bestimmt sind, und wann gilt diese Pflicht nicht?",
+    "expected_answer": "Die Anbieter stellen sicher, dass solche KI-Systeme so konzipiert und entwickelt werden, dass die betreffenden natürlichen Personen informiert werden, dass sie mit einem KI-System interagieren, es sei denn, dies ist aus Sicht einer angemessen informierten, aufmerksamen und verständigen natürlichen Person aufgrund der Umstände und des Kontexts der Nutzung offensichtlich. Die Pflicht gilt nicht für gesetzlich zur Aufdeckung, Verhütung, Ermittlung oder Verfolgung von Straftaten zugelassene KI-Systeme, wenn geeignete Schutzvorkehrungen für die Rechte und Freiheiten Dritter bestehen, es sei denn, diese Systeme stehen der Öffentlichkeit zur Anzeige einer Straftat zur Verfügung.",
+    "key_facts": [
+      "mit einem KI-System interagieren",
+      "angemessen informierten, aufmerksamen und verständigen",
+      "Aufdeckung, Verhütung, Ermittlung oder Verfolgung von Straftaten"
+    ],
+    "required_key_facts": ["mit einem KI-System interagieren"],
+    "min_key_facts": 2,
+    "source_doc": "ai_act_de",
+    "source_article": "50",
+    "answerable": true
+  },
+  {
+    "id": "q013",
+    "set": "dev3",
+    "type": "multi_passage",
+    "language": "en",
+    "question": "Which AI use cases in the area of employment, workers' management and access to self-employment are classified as high-risk under Annex III of the AI Act?",
+    "expected_answer": "(a) AI systems intended to be used for the recruitment or selection of natural persons, in particular to place targeted job advertisements, to analyse and filter job applications, and to evaluate candidates; (b) AI systems intended to be used to make decisions affecting terms of work-related relationships, the promotion or termination of work-related contractual relationships, to allocate tasks based on individual behaviour or personal traits or characteristics, or to monitor and evaluate the performance and behaviour of persons in such relationships.",
+    "key_facts": [
+      "recruitment or selection of natural persons",
+      "analyse and filter job applications",
+      "evaluate candidates",
+      "promotion or termination of work-related contractual relationships",
+      "monitor and evaluate the performance and behaviour"
+    ],
+    "min_key_facts": 3,
+    "source_doc": "ai_act_en",
+    "source_article": "annex-III",
+    "answerable": true
+  },
+  {
+    "id": "q014",
+    "set": "dev3",
+    "type": "cross_document",
+    "language": "en",
+    "question": "What is the purpose of the AI Act, and what does DORA lay down regarding the digital operational resilience of financial entities?",
+    "expected_answer": "AI Act: the purpose of the Regulation is to improve the functioning of the internal market and promote the uptake of human-centric and trustworthy artificial intelligence, while ensuring a high level of protection of health, safety and fundamental rights, including democracy, the rule of law and environmental protection, against the harmful effects of AI systems in the Union and supporting innovation. DORA: to achieve a high common level of digital operational resilience, it lays down uniform requirements concerning the security of network and information systems supporting the business processes of financial entities, including ICT risk management, reporting of major ICT-related incidents, digital operational resilience testing, information and intelligence sharing on cyber threats, and measures for the sound management of ICT third-party risk, as well as contractual requirements for ICT third-party service providers, an Oversight Framework for critical ICT third-party service providers, and rules on cooperation, supervision and enforcement by competent authorities.",
+    "key_facts": [
+      "human-centric and trustworthy",
+      "internal market",
+      "digital operational resilience",
+      "ICT risk management",
+      "Oversight Framework"
+    ],
+    "required_key_facts": ["human-centric and trustworthy", "digital operational resilience"],
+    "min_key_facts": 3,
+    "source_doc": ["ai_act_en", "dora_en"],
+    "source_article": ["1", "1"],
+    "answerable": true
+  },
+  {
+    "id": "q015",
+    "set": "dev3",
+    "type": "german",
+    "language": "de",
+    "question": "Welche Pflicht haben Anbieter und Betreiber von KI-Systemen in Bezug auf KI-Kompetenz?",
+    "expected_answer": "Die Anbieter und Betreiber von KI-Systemen ergreifen Maßnahmen, um nach besten Kräften sicherzustellen, dass ihr Personal und andere Personen, die in ihrem Auftrag mit dem Betrieb und der Nutzung von KI-Systemen befasst sind, über ein ausreichendes Maß an KI-Kompetenz verfügen, wobei ihre technischen Kenntnisse, ihre Erfahrung, ihre Ausbildung und Schulung und der Kontext, in dem die KI-Systeme eingesetzt werden sollen, sowie die Personen oder Personengruppen, bei denen die KI-Systeme eingesetzt werden sollen, zu berücksichtigen sind.",
+    "key_facts": [
+      "ausreichendes Maß an KI-Kompetenz",
+      "ihr Personal",
+      "technischen Kenntnisse"
+    ],
+    "required_key_facts": ["ausreichendes Maß an KI-Kompetenz"],
+    "min_key_facts": 2,
+    "source_doc": "ai_act_de",
+    "source_article": "4",
+    "answerable": true
+  }
 ]

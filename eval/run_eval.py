@@ -37,8 +37,9 @@ def cited_ok(q, answer):
     if arts is None:
         return None
     arts = arts if isinstance(arts, list) else [arts]
-    return any(
-        re.search(rf"(article|artikel)\s*{a}\b", answer, re.I) for a in arts
+    return all(
+        re.search(rf"(article|artikel)\s*{a}\b", answer, re.I)
+        for a in set(arts)
     )
 
 def score_question(q, result):
@@ -48,7 +49,9 @@ def score_question(q, result):
     if not q["answerable"]:
         refused = any(norm(r) in norm(answer) for r in REFUSALS)
         return {"id": q["id"], "type": q["type"], "passed": refused,
-                "context_hit": None, "answer_hit": None,"cited":None,}
+                "context_hit": None, "answer_hit": None,"cited":None,
+                "fallback": bool(result.get("warning")),
+                "answer": answer,"sources": result.get("sources"),}
 
     facts = q["key_facts"]
     in_answer = facts_found(facts, answer)
@@ -63,11 +66,13 @@ def score_question(q, result):
         "context_hit": f"{len(in_context)}/{len(facts)}",
         "answer_hit": f"{len(in_answer)}/{len(facts)}",
         "cited": cited_ok(q, answer + " " + result.get("sources", "")),
+        "fallback": bool(result.get("warning")),"answer": answer,
+        "sources": result.get("sources"),
     }
 
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument("--set", default="dev1", choices=["dev1", "dev2", "all"])
+    parser.add_argument("--set", default="dev1", choices=["dev1", "dev2","dev3", "all"])
     parser.add_argument("--system", default="baseline", choices=SYSTEMS)
     args = parser.parse_args()
 
@@ -79,15 +84,22 @@ def main():
     rows = []
     for q in golden:
         print(f"Running {q['id']}...")
-        rows.append(score_question(q, ask(q["question"])))
+        try:
+            rows.append(score_question(q, ask(q["question"])))
+        except Exception as e:
+            print(f"  ERROR on {q['id']}: {e}")
+            rows.append({"id": q["id"], "type": q["type"], "passed": False,
+                         "context_hit": None, "answer_hit": None, "cited": None,
+                         "fallback": None, "answer": f"ERROR: {e}", "sources": None})
 
-    print(f"\n{'id':6}{'type':16}{'context_hit':14}{'answer_hit':12}{'cited':8}result")
+    print(f"\n{'id':6}{'type':16}{'context_hit':14}{'answer_hit':12}{'cited':8}{'fallback':10}result")
     for r in rows:
         print(f"{r['id']:6}{r['type']:16}{str(r['context_hit']):14}"
-              f"{str(r['answer_hit']):12}{str(r['cited']):8}"
+              f"{str(r['answer_hit']):12}{str(r['cited']):8}{str(r['fallback']):10}"
               f"{'PASS' if r['passed'] else 'FAIL'}")
     passed = sum(r["passed"] for r in rows)
-    print(f"\nScore: {passed}/{len(rows)}")
+    fb = sum(1 for r in rows if r["fallback"])
+    print(f"\nScore: {passed}/{len(rows)}  (fallback used on {fb})")
 
     out = Path(f"eval/results_{args.system}_{args.set}.json")
     out.write_text(json.dumps(rows, indent=2), encoding="utf-8")
