@@ -80,7 +80,9 @@ def main():
 
     ask = importlib.import_module(SYSTEMS[args.system]).ask
     golden = json.loads(Path("eval/golden_set.json").read_text(encoding="utf-8"))
-    if args.set != "all":
+    if args.set == "all":
+        golden = [q for q in golden if q.get("set", "dev1") != "test"]
+    else:
         golden = [q for q in golden if q.get("set", "dev1") == args.set]
 
     rows = []

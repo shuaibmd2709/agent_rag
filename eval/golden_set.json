@@ -264,5 +264,182 @@
     "source_doc": "ai_act_de",
     "source_article": "4",
     "answerable": true
+  },
+  {
+    "id": "t01",
+    "set": "test",
+    "type": "direct_lookup",
+    "language": "en",
+    "question": "What is an 'importer' under the AI Act?",
+    "expected_answer": "A natural or legal person located or established in the Union that places on the market an AI system that bears the name or trademark of a natural or legal person established in a third country.",
+    "key_facts": [
+      "located or established in the Union",
+      "places on the market",
+      "name or trademark",
+      "third country"
+    ],
+    "required_key_facts": ["name or trademark"],
+    "min_key_facts": 3,
+    "source_doc": "ai_act_en",
+    "source_article": "3",
+    "answerable": true
+  },
+  {
+    "id": "t02",
+    "set": "test",
+    "type": "direct_lookup",
+    "language": "en",
+    "question": "What is the maximum administrative fine for an undertaking that fails to comply with the transparency obligations for providers and deployers under Article 50 of the AI Act?",
+    "expected_answer": "Administrative fines of up to EUR 15 000 000 or, if the offender is an undertaking, up to 3 % of its total worldwide annual turnover for the preceding financial year, whichever is higher.",
+    "key_facts": [
+      "EUR 15 000 000",
+      "3 %",
+      "whichever is higher"
+    ],
+    "required_key_facts": ["EUR 15 000 000"],
+    "min_key_facts": 2,
+    "source_doc": "ai_act_en",
+    "source_article": "99",
+    "confusable_with": "100",
+    "answerable": true
+  },
+  {
+    "id": "t03",
+    "set": "test",
+    "type": "multi_passage",
+    "language": "en",
+    "question": "What must the digital operational resilience strategy of a financial entity include under DORA?",
+    "expected_answer": "The strategy must set out how the ICT risk management framework is implemented, including methods to address ICT risk and attain specific ICT objectives, by: explaining how the framework supports the financial entity's business strategy and objectives; establishing the risk tolerance level for ICT risk, in accordance with the risk appetite, and analysing the impact tolerance for ICT disruptions; setting out clear information security objectives, including key performance indicators and key risk metrics; explaining the ICT reference architecture and any changes needed to reach specific business objectives; outlining the mechanisms put in place to detect ICT-related incidents, prevent their impact and provide protection from it; evidencing the current digital operational resilience situation on the basis of the number of major ICT-related incidents reported and the effectiveness of preventive measures; implementing digital operational resilience testing in accordance with Chapter IV; and outlining a communication strategy for ICT-related incidents the disclosure of which is required under Article 14.",
+    "key_facts": [
+      "risk tolerance level",
+      "information security objectives",
+      "ICT reference architecture",
+      "mechanisms put in place to detect ICT-related incidents",
+      "digital operational resilience testing",
+      "communication strategy"
+    ],
+    "min_key_facts": 4,
+    "source_doc": "dora_en",
+    "source_article": "6",
+    "confusable_with": "5",
+    "answerable": true
+  },
+  {
+    "id": "t04",
+    "set": "test",
+    "type": "multi_passage",
+    "language": "en",
+    "question": "What must high-risk AI systems enable the natural persons assigned to human oversight to do, under the AI Act?",
+    "expected_answer": "The high-risk AI system must be provided to the deployer in such a way that the natural persons to whom human oversight is assigned are enabled, as appropriate and proportionate: (a) to properly understand the relevant capacities and limitations of the system and duly monitor its operation, including in view of detecting and addressing anomalies, dysfunctions and unexpected performance; (b) to remain aware of the possible tendency of automatically relying or over-relying on the output of the system (automation bias); (c) to correctly interpret the system's output, taking into account, for example, the available interpretation tools and methods; (d) to decide, in any particular situation, not to use the system or to otherwise disregard, override or reverse its output; (e) to intervene in the operation of the system or interrupt it through a 'stop' button or a similar procedure that allows the system to come to a halt in a safe state.",
+    "key_facts": [
+      "capacities and limitations",
+      "automation bias",
+      "correctly interpret",
+      "disregard, override or reverse",
+      "button or a similar procedure"
+    ],
+    "min_key_facts": 3,
+    "source_doc": "ai_act_en",
+    "source_article": "14",
+    "confusable_with": "26",
+    "answerable": true
+  },
+  {
+    "id": "t05",
+    "set": "test",
+    "type": "cross_document",
+    "language": "en",
+    "question": "What do the AI Act and DORA each require regarding testing: for high-risk AI systems under the AI Act, and for financial entities under DORA?",
+    "expected_answer": "AI Act: high-risk AI systems shall be tested for the purpose of identifying the most appropriate and targeted risk management measures; testing shall ensure that they perform consistently for their intended purpose and are in compliance with the requirements of the Section. DORA: financial entities, other than microenterprises, shall establish, maintain and review a sound and comprehensive digital operational resilience testing programme as an integral part of the ICT risk-management framework, in order to assess preparedness for handling ICT-related incidents, identify weaknesses, deficiencies and gaps in digital operational resilience, and promptly implement corrective measures. The programme includes a range of assessments, tests, methodologies, practices and tools, and is conducted following a risk-based approach.",
+    "key_facts": [
+      "perform consistently",
+      "targeted risk management measures",
+      "testing programme",
+      "other than microenterprises",
+      "risk-based approach"
+    ],
+    "required_key_facts": ["perform consistently", "testing programme"],
+    "min_key_facts": 3,
+    "source_doc": ["ai_act_en", "dora_en"],
+    "source_article": ["9", "24"],
+    "answerable": true
+  },
+  {
+    "id": "t06",
+    "set": "test",
+    "type": "german",
+    "language": "de",
+    "question": "An welche Behörde müssen Finanzunternehmen schwerwiegende IKT-bezogene Vorfälle nach DORA melden, und was gilt für Kreditinstitute?",
+    "expected_answer": "Finanzunternehmen melden schwerwiegende IKT-bezogene Vorfälle der nach Artikel 46 jeweils zuständigen Behörde. Unterliegt ein Finanzunternehmen der Aufsicht mehr als einer nach Artikel 46 zuständigen nationalen Behörde, so benennen die Mitgliedstaaten eine einzige zuständige Behörde als einschlägige zuständige Behörde. Kreditinstitute, die gemäß Artikel 6 Absatz 4 der Verordnung (EU) Nr. 1024/2013 als bedeutend eingestuft wurden, melden schwerwiegende IKT-bezogene Vorfälle der gemäß Artikel 4 der Richtlinie 2013/36/EU benannten jeweils zuständigen nationalen Behörde, die diese Meldung unverzüglich an die EZB weiterleitet.",
+    "key_facts": [
+      "zuständigen Behörde",
+      "einzige zuständige Behörde",
+      "bedeutend",
+      "EZB"
+    ],
+    "min_key_facts": 3,
+    "source_doc": "dora_de",
+    "source_article": "19",
+    "answerable": true
+  },
+  {
+    "id": "t07",
+    "set": "test",
+    "type": "german",
+    "language": "de",
+    "question": "Was ist ein „Anbieter“ nach der KI-Verordnung?",
+    "expected_answer": "Eine natürliche oder juristische Person, Behörde, Einrichtung oder sonstige Stelle, die ein KI-System oder ein KI-Modell mit allgemeinem Verwendungszweck entwickelt oder entwickeln lässt und es unter ihrem eigenen Namen oder ihrer Handelsmarke in Verkehr bringt oder das KI-System unter ihrem eigenen Namen oder ihrer Handelsmarke in Betrieb nimmt, sei es entgeltlich oder unentgeltlich.",
+    "key_facts": [
+      "natürliche oder juristische Person",
+      "entwickelt oder entwickeln lässt",
+      "Handelsmarke",
+      "entgeltlich oder unentgeltlich"
+    ],
+    "required_key_facts": ["Handelsmarke"],
+    "min_key_facts": 3,
+    "source_doc": "ai_act_de",
+    "source_article": "3",
+    "confusable_with": "3",
+    "answerable": true
+  },
+  {
+    "id": "t08",
+    "set": "test",
+    "type": "multi_passage",
+    "language": "en",
+    "question": "Which AI use cases in the area of education and vocational training are classified as high-risk under Annex III of the AI Act?",
+    "expected_answer": "(a) AI systems intended to be used to determine access or admission or to assign natural persons to educational and vocational training institutions at all levels; (b) AI systems intended to be used to evaluate learning outcomes, including when those outcomes are used to steer the learning process of natural persons in educational and vocational training institutions at all levels; (c) AI systems intended to be used for the purpose of assessing the appropriate level of education that an individual will receive or will be able to access, in the context of or within educational and vocational training institutions at all levels; (d) AI systems intended to be used for monitoring and detecting prohibited behaviour of students during tests in the context of or within educational and vocational training institutions at all levels.",
+    "key_facts": [
+      "determine access or admission",
+      "evaluate learning outcomes",
+      "appropriate level of education",
+      "prohibited behaviour of students during tests"
+    ],
+    "min_key_facts": 3,
+    "source_doc": "ai_act_en",
+    "source_article": "annex-III",
+    "answerable": true
+  },
+  {
+    "id": "t09",
+    "set": "test",
+    "type": "unanswerable",
+    "language": "en",
+    "question": "Within how many hours must an essential entity submit an early warning of a significant incident under the NIS2 Directive?",
+    "expected_answer": "The documents do not contain this information.",
+    "source_doc": null,
+    "source_article": null,
+    "answerable": false
+  },
+  {
+    "id": "t10",
+    "set": "test",
+    "type": "unanswerable",
+    "language": "en",
+    "question": "What is the maximum fine for very large online platforms that breach the Digital Services Act?",
+    "expected_answer": "The documents do not contain this information.",
+    "source_doc": null,
+    "source_article": null,
+    "answerable": false
   }
 ]
