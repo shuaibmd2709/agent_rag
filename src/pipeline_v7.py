@@ -33,6 +33,7 @@ def sources_line(chunks, answer):
             seen.append(s)
     return "Sources: " + "; ".join(seen) if seen else "Sources: none matched"
 
+
 def describe(guard):
     parts = []
     if guard["unsupported_numbers"]:
@@ -40,6 +41,7 @@ def describe(guard):
     for _, line in guard["weak_lines"]:
         parts.append("unsupported line: " + line[:90])
     return "\n".join(parts)
+
 
 def complete_passages(passages):
     by_article, position = _index()
@@ -53,6 +55,7 @@ def complete_passages(passages):
         last = min(max(idxs) + 1, len(by_article[key]) - 1)
         out.extend(by_article[key][j] for j in range(min(idxs), last + 1))
     return out
+
 
 def ask(question: str) -> dict:
     chunks = retrieve(question)
@@ -89,6 +92,19 @@ def ask(question: str) -> dict:
                 + f"\n\n(Note: {len(drop)} statement(s) were removed because "
                 "they could not be verified against the sources.)"
             )
+
+    return {
+        "answer": answer,
+        "sources": sources_line(chunks, answer),
+        "guard": guard,
+        "regenerated": regenerated,
+        "warning": warning,
+        "contexts": [
+            {"doc": c["doc"], "article": c["article"],
+             "page": c["page"], "text": c["text"]}
+            for c in chunks
+        ],
+    }
 
 
 if __name__ == "__main__":
