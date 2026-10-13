@@ -1,0 +1,53 @@
+{
+  "meta": {
+    "system": "final",
+    "set": "dev2",
+    "repeats": 3,
+    "generator": "claude-haiku-4-5-20251001",
+    "judge": "claude-sonnet-5-5"
+  },
+  "rows": [
+    {
+      "id": "q007",
+      "rep": 1,
+      "correct": true,
+      "complete": true,
+      "grounded": true,
+      "relevant": true,
+      "reason": "The answer lists items (a)-(i) of Article 5(2) faithfully and matches the expected answer; it omits only the introductory 'define, approve, oversee' sentence, which is a minor point, and its condensed item (i) is still supported by the context.",
+      "judge_error": null,
+      "passed": true,
+      "fallback": false,
+      "answer": "According to DORA Article 5, the management body of a financial entity shall:\n\n(a) bear the ultimate responsibility for managing the financial entity's ICT risk;\n\n(b) put in place policies that aim to ensure the maintenance of high standards of availability, authenticity, integrity and confidentiality, of data;\n\n(c) set clear roles and responsibilities for all ICT-related functions and establish appropriate governance arrangements to ensure effective and timely communication, cooperation and coordination among those functions;\n\n(d) bear the overall responsibility for setting and approving the digital operational resilience strategy, including the determination of the appropriate risk tolerance level of ICT risk of the financial entity;\n\n(e) approve, oversee and periodically review the implementation of the financial entity's ICT business continuity policy and ICT response and recovery plans;\n\n(f) approve and periodically review the financial entity's ICT internal audit plans, ICT audits and material modifications to them;\n\n(g) allocate and periodically review the appropriate budget to fulfil the financial entity's digital operational resilience needs in respect of all types of resources, including relevant ICT security awareness programmes and digital operational resilience training, and ICT skills for all staff;\n\n(h) approve and periodically review the financial entity's policy on arrangements regarding the use of ICT services provided by ICT third-party service providers;\n\n(i) put in place, at corporate level, reporting channels enabling it to be duly informed of arrangements with ICT third-party service providers, planned material changes, and their potential impact on critical or important functions, including major ICT-related incidents and their impact.",
+      "sources": "Sources: dora_en article 5"
+    },
+    {
+      "id": "q007",
+      "rep": 2,
+      "correct": true,
+      "complete": true,
+      "grounded": true,
+      "relevant": true,
+      "reason": "The answer lists items (a)-(i) of Article 5(2) faithfully, matching the expected answer and context; it omits only the introductory 'define, approve, oversee and be responsible' sentence, which is not a main point, and its condensed item (i) does not contradict the source.",
+      "judge_error": null,
+      "passed": true,
+      "fallback": false,
+      "answer": "According to DORA Article 5, the management body of a financial entity shall:\n\n(a) bear the ultimate responsibility for managing the financial entity's ICT risk;\n\n(b) put in place policies that aim to ensure the maintenance of high standards of availability, authenticity, integrity and confidentiality, of data;\n\n(c) set clear roles and responsibilities for all ICT-related functions and establish appropriate governance arrangements to ensure effective and timely communication, cooperation and coordination among those functions;\n\n(d) bear the overall responsibility for setting and approving the digital operational resilience strategy, including the determination of the appropriate risk tolerance level of ICT risk of the financial entity;\n\n(e) approve, oversee and periodically review the implementation of the financial entity's ICT business continuity policy and ICT response and recovery plans;\n\n(f) approve and periodically review the financial entity's ICT internal audit plans, ICT audits and material modifications to them;\n\n(g) allocate and periodically review the appropriate budget to fulfil the financial entity's digital operational resilience needs in respect of all types of resources, including relevant ICT security awareness programmes and digital operational resilience training, and ICT skills for all staff;\n\n(h) approve and periodically review the financial entity's policy on arrangements regarding the use of ICT services provided by ICT third-party service providers;\n\n(i) put in place, at corporate level, reporting channels enabling it to be duly informed of arrangements with ICT third-party service providers, planned material changes, and their potential impact on critical or important functions, including major ICT-related incidents and their impact.",
+      "sources": "Sources: dora_en article 5"
+    },
+    {
+      "id": "q007",
+      "rep": 3,
+      "correct": true,
+      "complete": true,
+      "grounded": true,
+      "relevant": true,
+      "reason": "The answer lists items (a)-(i) of Article 5(2) faithfully, matching the expected answer and context; it omits only the introductory 'define, approve, oversee and be responsible for implementation' sentence, which is a minor omission, and its condensed item (i) still covers the main points.",
+      "judge_error": null,
+      "passed": true,
+      "fallback": false,
+      "answer": "According to DORA Article 5, the management body of a financial entity shall:\n\n(a) bear the ultimate responsibility for managing the financial entity's ICT risk;\n\n(b) put in place policies that aim to ensure the maintenance of high standards of availability, authenticity, integrity and confidentiality, of data;\n\n(c) set clear roles and responsibilities for all ICT-related functions and establish appropriate governance arrangements to ensure effective and timely communication, cooperation and coordination among those functions;\n\n(d) bear the overall responsibility for setting and approving the digital operational resilience strategy, including the determination of the appropriate risk tolerance level of ICT risk of the financial entity;\n\n(e) approve, oversee and periodically review the implementation of the financial entity's ICT business continuity policy and ICT response and recovery plans;\n\n(f) approve and periodically review the financial entity's ICT internal audit plans, ICT audits and material modifications to them;\n\n(g) allocate and periodically review the appropriate budget to fulfil the financial entity's digital operational resilience needs in respect of all types of resources, including relevant ICT security awareness programmes and digital operational resilience training, and ICT skills for all staff;\n\n(h) approve and periodically review the financial entity's policy on arrangements regarding the use of ICT services provided by ICT third-party service providers;\n\n(i) put in place, at corporate level, reporting channels enabling it to be duly informed of arrangements with ICT third-party service providers, planned material changes, and their potential impact on critical or important functions, including major ICT-related incidents and their impact.",
+      "sources": "Sources: dora_en article 5"
+    }
+  ]
+}

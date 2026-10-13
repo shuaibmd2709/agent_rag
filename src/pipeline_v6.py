@@ -30,6 +30,7 @@ def detect(question):
         if any(re.search(p, q) for p in r["patterns"])
     ]
 
+GAP = 2
 
 def expand(selected):
     by_article, position = _index()
@@ -44,9 +45,13 @@ def expand(selected):
         groups.setdefault(key, set()).update(range(lo, hi))
     ordered = []
     for key, idxs in groups.items():
-        ordered.extend(by_article[key][j] for j in sorted(idxs))
+        idxs = sorted(idxs)
+        filled = set(idxs)
+        for a, b in zip(idxs, idxs[1:]):
+            if 1 < b - a <= GAP + 1:
+                filled.update(range(a + 1, b))
+        ordered.extend(by_article[key][j] for j in sorted(filled))
     return ordered
-
 
 def retrieve(question):
     regs = detect(question)

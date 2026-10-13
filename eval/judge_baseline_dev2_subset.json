@@ -1,0 +1,39 @@
+{
+  "meta": {
+    "system": "baseline",
+    "set": "dev2",
+    "repeats": 1,
+    "generator": "claude-haiku-4-5-20251001",
+    "judge": "claude-sonnet-5-5"
+  },
+  "rows": [
+    {
+      "id": "q006",
+      "rep": 1,
+      "correct": false,
+      "complete": false,
+      "grounded": true,
+      "relevant": true,
+      "reason": "The system declined to answer and gave none of the definition's elements (machine-based, autonomy, adaptiveness, inferring outputs), so it does not match the expected answer; its statement that the context lacks the definition is accurate, and it addresses the question.",
+      "judge_error": null,
+      "passed": false,
+      "fallback": false,
+      "answer": "I don't know. The context provided does not contain a direct definition of what an \"AI system\" is under the AI Act. While the context references the Artificial Intelligence Act (EU 2024/1689) and discusses various requirements and provisions related to AI systems, it does not provide the foundational definition of what constitutes an AI system according to the regulation.",
+      "sources": null
+    },
+    {
+      "id": "q007",
+      "rep": 1,
+      "correct": true,
+      "complete": false,
+      "grounded": true,
+      "relevant": true,
+      "reason": "The answer is consistent with the expected answer and supported by the context (including the Article 5(4) training point), but it omits many expected items such as roles and responsibilities, the resilience strategy and risk tolerance, continuity policy, audit plans, budget, third-party policy, and reporting channels.",
+      "judge_error": null,
+      "passed": false,
+      "fallback": false,
+      "answer": "According to the context, the management body of a financial entity must:\n\n1. **Define, approve, oversee and be responsible** for the implementation of all arrangements related to the ICT risk management framework\n\n2. **Bear the ultimate responsibility** for managing the financial entity's ICT risk\n\n3. **Put in place policies** that aim to ensure the maintenance of high standards of availability, authenticity, integrity and confidentiality of data\n\n4. **Actively keep up to date** with sufficient knowledge and skills to understand and assess ICT risk and its impact on the financial entity's operations, including by following specific training on a regular basis commensurate to the ICT risk being managed",
+      "sources": null
+    }
+  ]
+}
