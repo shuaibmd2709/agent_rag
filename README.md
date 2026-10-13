@@ -249,8 +249,4 @@ Dockerfile
 
 ## Author
 
-<your name> | <contact link>
-
-## Licence
-
-<choose a licence, for example MIT>
+<Shuaib> | <www.linkedin.com/in/shuaib-md-420a34216>
