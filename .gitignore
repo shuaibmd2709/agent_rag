@@ -12,4 +12,5 @@ __pycache__/
 .env
 chroma_db/
 data/*.pdf
-*.sqlite3
+*.sqlite3docker.env
+docker.env
