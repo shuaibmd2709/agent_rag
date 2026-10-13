@@ -8,6 +8,7 @@ from src.pipeline_v6 import retrieve
 
 PROMPT_V5 = """Answer the question using only the context below.
 Copy the wording of the context as closely as possible.
+Include every item, condition and exception that the context gives for what is asked. Do not shorten lists or leave out exceptions.
 Do not add numbers, dates or conditions that are not in the context.
 If the context does not contain the answer, say you don't know.
 
