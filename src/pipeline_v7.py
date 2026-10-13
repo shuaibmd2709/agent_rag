@@ -1,4 +1,5 @@
 import sys
+import re
 
 from src.guard import check, is_refusal, used_chunks
 from src.llm import get_llm
@@ -56,20 +57,25 @@ def complete_passages(passages):
         out.extend(by_article[key][j] for j in range(min(idxs), last + 1))
     return out
 
-
 def ask(question: str) -> dict:
     chunks = retrieve(question)
     context = "\n\n".join(c["text"] for c in chunks)
     prompt = PROMPT_V5.format(context=context, question=question)
     llm = get_llm()
 
+    def verify(text):
+        if is_refusal(text) and len(text.split()) <= 80 and not re.search(r"\d", text):
+            return {"unsupported_numbers": [], "weak_lines": [],
+                    "soft_lines": [], "flagged": False}
+        return check(text, context)
+
     answer = llm.invoke(prompt).content
-    guard = check(answer, context)
+    guard = verify(answer)
     regenerated = False
 
     if guard["flagged"]:
         retry = llm.invoke(prompt + RETRY_NOTE.format(problems=describe(guard))).content
-        retry_guard = check(retry, context)
+        retry_guard = verify(retry)
         regenerated = True
         if not retry_guard["flagged"]:
             answer, guard = retry, retry_guard
@@ -78,20 +84,30 @@ def ask(question: str) -> dict:
     if guard["flagged"]:
         warning = "Unverified content in the generated answer: " + describe(guard)
         if guard["unsupported_numbers"]:
-            passages = complete_passages(used_chunks(answer, chunks) or chunks[:2])
-            answer = (
-                "I could not verify my own answer against the sources, "
-                "so here are the relevant passages instead:\n\n"
-                + "\n\n".join(c["text"] for c in passages)
-            )
+            used = used_chunks(answer, chunks)
+            if used:
+                passages = complete_passages(used)
+                answer = (
+                    "I could not verify my own answer against the sources, "
+                    "so here are the relevant passages instead:\n\n"
+                    + "\n\n".join(c["text"] for c in passages)
+                )
+            else:
+                answer = ("I don't know. The documents do not contain "
+                          "a verifiable answer to this question.")
         else:
             drop = {line for _, line in guard["weak_lines"]}
             kept = [ln for ln in answer.splitlines() if ln.strip() not in drop]
-            answer = (
-                "\n".join(kept).strip()
-                + f"\n\n(Note: {len(drop)} statement(s) were removed because "
-                "they could not be verified against the sources.)"
-            )
+            text = "\n".join(kept).strip()
+            if not text:
+                answer = ("I don't know. The documents do not contain "
+                          "a verifiable answer to this question.")
+            else:
+                answer = (
+                    text
+                    + f"\n\n(Note: {len(drop)} statement(s) were removed because "
+                    "they could not be verified against the sources.)"
+                )
 
     return {
         "answer": answer,
