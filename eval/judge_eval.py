@@ -191,6 +191,7 @@ def main():
                 tok_out += to
                 row = {"id": q["id"], "rep": rep, **verdict,
                        "fallback": bool(result.get("warning")),
+                       "warning": result.get("warning"),
                        "answer": result["answer"], "sources": result.get("sources")}
             except Exception as e:
                 traceback.print_exc()
