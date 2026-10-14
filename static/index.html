@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>About DORA and the EU AI Act</title>
+<style>
+:root{
+  --bg:#F1F3F7;--panel:#FFFFFF;--ink:#101828;--muted:#586174;--line:#D5DAE3;
+  --dora:#3B4CC0;--ai:#0B7F6C;--warn:#9A5B00;--warnbg:#FFF3DC;--focus:#3B4CC0;
+  --serif:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;
+  --sans:system-ui,"Segoe UI",Roboto,sans-serif;
+}
+@media (prefers-color-scheme:dark){:root{
+  --bg:#0F1420;--panel:#171D2B;--ink:#E8ECF4;--muted:#9AA4B8;--line:#2A3347;
+  --dora:#8C9BFF;--ai:#4FD1B8;--warn:#F2B35A;--warnbg:#2B2113;--focus:#8C9BFF;
+}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 var(--sans)}
+.wrap{max-width:1120px;margin:0 auto;padding:clamp(20px,4vw,48px) clamp(16px,4vw,32px) 48px}
+h1{font:600 clamp(1.7rem,3.2vw,2.3rem)/1.15 var(--serif);letter-spacing:-.01em;margin:0 0 8px}
+.lead{color:var(--muted);margin:0 0 24px;max-width:60ch}
+form{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:14px}
+label{display:block;font-weight:600;margin-bottom:6px}
+textarea{width:100%;resize:vertical;min-height:64px;border:1px solid var(--line);border-radius:8px;padding:10px 12px;font:inherit;background:var(--bg);color:var(--ink)}
+.row{display:flex;gap:12px;align-items:center;justify-content:space-between;flex-wrap:wrap;margin-top:10px}
+button{font:inherit;cursor:pointer}
+.ask{background:var(--ink);color:var(--panel);border:0;border-radius:8px;padding:10px 22px;font-weight:600}
+.ask:disabled{opacity:.6;cursor:wait}
+.hint{color:var(--muted);font-size:.875rem}
+.chips{display:flex;gap:8px;flex-wrap:wrap;margin:14px 0 0;padding:0;list-style:none}
+.chip{background:transparent;border:1px solid var(--line);color:var(--ink);border-radius:999px;padding:6px 12px;font-size:.875rem}
+.chip:hover{border-color:var(--ink)}
+:focus-visible{outline:3px solid var(--focus);outline-offset:2px}
+#out{margin-top:28px}
+.result{display:grid;gap:24px;grid-template-columns:minmax(0,1fr)}
+@media (min-width:920px){.result{grid-template-columns:minmax(0,1fr) 380px;align-items:start}}
+.answer{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:clamp(16px,3vw,28px)}
+.status{display:flex;align-items:center;gap:8px;font-weight:600;font-size:.95rem;margin-bottom:14px}
+.dot{width:10px;height:10px;border-radius:50%;background:var(--ai);flex:none}
+.dot.none{background:var(--muted)}.dot.warn{background:var(--warn)}
+.text{font:1.08rem/1.7 var(--serif);max-width:68ch}
+.text p{margin:0 0 .9em}.text ul{margin:0 0 .9em;padding-left:1.2em}.text li{margin:.25em 0}
+.text h3{font:600 1.05rem/1.3 var(--sans);margin:1em 0 .4em}
+.note{background:var(--warnbg);border-left:4px solid var(--warn);border-radius:6px;padding:10px 14px;margin:0 0 16px;font-size:.95rem}
+.rail h2{font:600 1rem/1.3 var(--sans);margin:0 0 10px}
+.src{background:var(--panel);border:1px solid var(--line);border-left:5px solid var(--c);border-radius:8px;padding:12px 14px;margin:0 0 10px}
+.src.dora{--c:var(--dora)}.src.ai{--c:var(--ai)}
+.src header{display:flex;justify-content:space-between;gap:10px;align-items:baseline;margin-bottom:6px}
+.src b{font:600 1rem/1.3 var(--serif)}
+.badge{font-size:.8rem;color:var(--c);font-weight:600;white-space:nowrap}
+.src p{margin:0;font:.92rem/1.55 var(--serif);white-space:pre-line}
+details>summary{cursor:pointer;color:var(--muted);font-size:.875rem;margin-top:8px}
+.rail>details>summary{margin:0 0 10px}
+.pulse{color:var(--muted);animation:p 1.4s ease-in-out infinite}
+@keyframes p{50%{opacity:.45}}
+@media (prefers-reduced-motion:reduce){.pulse{animation:none}}
+footer{margin-top:40px;color:var(--muted);font-size:.85rem;max-width:70ch}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>Ask about DORA and the EU AI Act</h1>
+  <p class="lead">Every answer comes with the passages it was built from. Ask in English or German.</p>
+
+  <form id="f">
+    <label for="q">Your question</label>
+    <textarea id="q" rows="2" maxlength="1000" placeholder="For example: What must the management body of a financial entity do about ICT risk?"></textarea>
+    <div class="row">
+      <span class="hint">Press Ctrl+Enter to ask</span>
+      <button class="ask" id="go" type="submit">Ask</button>
+    </div>
+    <ul class="chips">
+      <li><button type="button" class="chip" data-q="What is an 'AI system' under the AI Act?">Definition of an AI system</button></li>
+      <li><button type="button" class="chip" data-q="Was ist ein schwerwiegender IKT-bezogener Vorfall nach DORA?">Schwerer IKT-Vorfall, auf Deutsch</button></li>
+      <li><button type="button" class="chip" data-q="Who must report incidents under the AI Act and under DORA, and to which authority?">Incident reporting in both laws</button></li>
+      <li><button type="button" class="chip" data-q="What must providers ensure for AI systems that interact directly with people?">Chatbot transparency</button></li>
+      <li><button type="button" class="chip" data-q="Within how many hours must a personal data breach be reported to the supervisory authority under the GDPR?">A question it should decline</button></li>
+    </ul>
+  </form>
+
+  <section id="out" aria-live="polite"></section>
+
+  <footer>Not legal advice. Answers are based on the Official Journal texts of DORA (Regulation 2022/2554) and the EU AI Act (Regulation 2024/1689), without the recitals. Check the source passage before relying on an answer.</footer>
+</div>
+
+<script>
+const API = (window.API_BASE || "").replace(/\/$/, "");
+const $ = s => document.querySelector(s);
+const esc = s => s.replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+
+function fmt(s) {
+  const inline = t => esc(t).replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>");
+  return s.trim().split(/\n{2,}/).map(b => {
+    const lines = b.split("\n").filter(l => l.trim());
+    if (!lines.length) return "";
+    if (lines.every(l => /^\s*[*\-•]\s+/.test(l)))
+      return "<ul>" + lines.map(l => "<li>" + inline(l.replace(/^\s*[*\-•]\s+/, "")) + "</li>").join("") + "</ul>";
+    if (lines.length === 1 && /^#{1,4}\s/.test(lines[0]))
+      return "<h3>" + inline(lines[0].replace(/^#{1,4}\s+/, "")) + "</h3>";
+    return "<p>" + lines.map(inline).join("<br>") + "</p>";
+  }).join("");
+}
+
+function passage(c) {
+  const lines = c.text.split("\n");
+  const parts = lines.shift().replace(/^\[|\]$/g, "").split(" | ");
+  const body = lines.join("\n")
+    .replace(/\n(?=\([a-z0-9]{1,4}\)\s|\d{1,3}\.\s)/g, "\u0001")
+    .replace(/\n/g, " ").replace(/\u0001/g, "\n").trim();
+  return { article: parts[1] || "", title: parts[2] || "", body };
+}
+
+function card(c) {
+  const p = passage(c);
+  const dora = c.doc.startsWith("dora");
+  const lang = c.doc.endsWith("_de") ? "German" : "English";
+  const long = p.body.length > 380;
+  const head = p.article + (p.title ? ", " + p.title : "");
+  return `<article class="src ${dora ? "dora" : "ai"}"><header><b>${esc(head)}</b>` +
+    `<span class="badge">${dora ? "DORA" : "AI Act"}, ${lang}</span></header>` +
+    `<p>${esc(long ? p.body.slice(0, 380).trim() + "…" : p.body)}</p>` +
+    (long ? `<details><summary>Show full passage</summary><p>${esc(p.body)}</p></details>` : "") +
+    `</article>`;
+}
+
+function render(d) {
+  const none = d.sources.startsWith("Sources: none");
+  const used = new Set(d.sources.replace(/^Sources:\s*/, "").split("; "));
+  const mine = d.contexts.filter(c => used.has(`${c.doc} article ${c.article}`));
+  const rest = d.contexts.filter(c => !mine.includes(c));
+  const arts = new Set(mine.map(c => c.doc + c.article)).size;
+
+  let kind = none ? "none" : d.warning ? "warn" : "ok";
+  let status = none ? "These documents do not contain an answer"
+    : d.warning ? "Check this answer against the passages"
+    : `Answered from ${arts} ${arts === 1 ? "article" : "articles"}`;
+
+  let note = "";
+  if (d.warning) {
+    note = /^I could not verify my own answer/.test(d.answer)
+      ? "The generated answer could not be checked against the sources, so the source text is shown instead."
+      : /\(Note: \d+ statement/.test(d.answer)
+        ? "Some statements could not be checked against the sources and were removed."
+        : "Part of this answer could not be checked against the sources.";
+    note = `<p class="note">${note}</p>`;
+  }
+
+  const rail = none
+    ? `<details><summary>Closest passages (they do not answer the question)</summary>${rest.map(card).join("")}</details>`
+    : `<h2>Sources</h2>${mine.map(card).join("") || "<p class='hint'>No passage matched the answer text.</p>"}` +
+      (rest.length ? `<details><summary>Also retrieved (${rest.length})</summary>${rest.map(card).join("")}</details>` : "");
+
+  $("#out").innerHTML = `<div class="result"><div class="answer">` +
+    `<div class="status"><span class="dot ${kind}"></span>${esc(status)}</div>${note}` +
+    `<div class="text">${fmt(d.answer)}</div></div><aside class="rail">${rail}</aside></div>`;
+}
+
+async function ask(q) {
+  const btn = $("#go");
+  btn.disabled = true; btn.textContent = "Searching…";
+  $("#out").innerHTML = '<p class="pulse">Searching DORA and the AI Act, then writing an answer…</p>';
+  try {
+    const r = await fetch(API + "/ask", {
+      method: "POST", headers: {"Content-Type": "application/json"},
+      body: JSON.stringify({question: q})
+    });
+    if (r.status === 422) throw new Error("Enter a question with at least 3 characters.");
+    if (!r.ok) throw new Error("The answer service failed. Try again in a moment.");
+    render(await r.json());
+  } catch (e) {
+    const msg = e instanceof TypeError
+      ? "Can't reach the answer service. Check that the server is running, then try again." : e.message;
+    $("#out").innerHTML = `<p class="note">${esc(msg)}</p>`;
+  } finally {
+    btn.disabled = false; btn.textContent = "Ask";
+  }
+}
+
+$("#f").addEventListener("submit", e => { e.preventDefault(); const q = $("#q").value.trim(); if (q) ask(q); });
+$("#q").addEventListener("keydown", e => { if ((e.ctrlKey || e.metaKey) && e.key === "Enter") $("#f").requestSubmit(); });
+document.querySelectorAll(".chip").forEach(b => b.addEventListener("click", () => {
+  $("#q").value = b.dataset.q; ask(b.dataset.q);
+}));
+</script>
+</body>
+</html>

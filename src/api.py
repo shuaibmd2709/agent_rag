@@ -1,5 +1,7 @@
 import logging
 from contextlib import asynccontextmanager
+from pathlib import Path
+from fastapi.responses import FileResponse
 
 from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel, Field
@@ -36,6 +38,12 @@ async def lifespan(app: FastAPI):
 
 
 app = FastAPI(title="Regulatory RAG: DORA and EU AI Act", lifespan=lifespan)
+STATIC = Path(__file__).resolve().parent.parent / "static"
+
+
+@app.get("/", include_in_schema=False)
+def index():
+    return FileResponse(STATIC / "index.html")
 
 
 @app.get("/health")
